@@ -1,12 +1,11 @@
 import React from 'react';
-import  Header from './components/header';
 
 class Home extends React.Component {
 
     render() {
         return (
-            <div className="">
-              <Header/>
+            <div>
+                欢迎进入油站管理系统！
             </div>
         );
     }

@@ -12,11 +12,31 @@
 .header .logoBox .logo {
   width: 174px;
   height: 42px;
-  padding: 24px 20px;
+  margin: 24px 20px;
 }
 .header .menuBox {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   width: 60%;
   height: 100%;
+  text-align: center;
+}
+.header .menuBox .menuNav {
+  padding: 0 15px;
+  text-decoration: none;
+}
+.header .menuBox .menuNav .pic {
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin: 0 auto;
+}
+.header .menuBox .menuNav .title {
+  color: #fff;
+}
+.header .menuBox .active {
+  background: #000;
 }
 .header .handleBox {
   width: 20%;
