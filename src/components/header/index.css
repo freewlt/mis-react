@@ -1,0 +1,24 @@
+.header {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  height: 90px;
+  background: #1863fd;
+}
+.header .logoBox {
+  width: 20%;
+  height: 100%;
+}
+.header .logoBox .logo {
+  width: 174px;
+  height: 42px;
+  padding: 24px 20px;
+}
+.header .menuBox {
+  width: 60%;
+  height: 100%;
+}
+.header .handleBox {
+  width: 20%;
+  height: 100%;
+}
