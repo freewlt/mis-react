@@ -1,12 +1,17 @@
 import React,{Component} from 'react';
-import { Link} from 'react-router-dom'
+import { Link} from 'react-router-dom';
+import { Button } from 'antd';
 import './index.css';
-import Logo from './../../static/images/iconOilCard.png';
-import iconEchart from './../../static/images/iconEchart.png';
-import iconMoney from './../../static/images/iconMoney.png';
-import iconOilCard from './../../static/images/iconOilCard.png';
-import iconTable from './../../static/images/iconTable.png';
-import iconSys from './../../static/images/iconSys.png';
+import Logo from './../../static/images/header/logo.png';
+import iconEchart from './../../static/images/header/iconEchart.png';
+import iconMoney from './../../static/images/header/iconMoney.png';
+import iconOilCard from './../../static/images/header/iconOilCard.png';
+import iconTable from './../../static/images/header/iconTable.png';
+import iconSys from './../../static/images/header/iconSys.png';
+import cashier from './../../static/images/header/cashier.png';
+import iconMin from './../../static/images/header/min.png';
+import iconMax from './../../static/images/header/max.png';
+import iconClose from './../../static/images/header/close.png';
 
 
 const navList = [
@@ -22,11 +27,12 @@ class Header extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            current: 0,
+            current: 1,
         }
     }
     
     handleClick = (e) => {
+        console.log(e.id)
         this.setState({
             current: e.id,
         });
@@ -34,8 +40,8 @@ class Header extends Component {
 
     render(){
         
-        const navLists = navList.map((item, id) =>
-            <Link className={ this.state.current === id ? 'active menuNav' :'menuNav' } to={item.path} key={id} onClick={this.handleClick.bind(this,item)}>
+        const navLists = navList.map((item) =>
+            <Link className={ item.id === this.state.current ? 'active menuNav' :'menuNav' } to={item.path} key={item.id} onClick={this.handleClick.bind(this,item)}>
                 <img className="pic" src={item.pic} alt=""/>
                 <span className="title">{item.title} </span>
             </Link>
@@ -50,6 +56,29 @@ class Header extends Component {
                     {navLists}
                 </div>
                 <div className="handleBox">
+                     <div className="handleDetail">
+                        <div className="detail">
+                            <img className="iconPic" src={cashier} title="收银员" alt=""/>
+                            <span className="title">收银员：</span>
+                            <span className="title">0070*10-赵奕欢</span>
+                        </div>
+                        <div className="detail">
+                            <span className="title">班次号：</span>
+                            <span className="title">0070*10081245</span>
+                        </div>
+                        <div className="detail">
+                            <span className="title">班次：</span>
+                            <span className="title">中班-已上班</span>
+                        </div>
+                        <div className="detail handle">
+                            <img className="iconPic" src={iconMin} title="最小号" alt=""/>
+                            <img className="iconPic" src={iconMax} title="最大化" alt=""/>
+                            <img className="iconPic" src={iconClose} title="关闭" alt=""/>
+                        </div>
+                     </div>
+                    <Button className="handleBtn" type="primary" shape="round" icon="profile" >
+                        上班
+                    </Button>
                 </div>
             </div>
         )
