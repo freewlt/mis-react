@@ -63,6 +63,10 @@ body {
   padding: 0 5px;
   cursor: pointer;
 }
+.header .handleBox .handleDetail .detail .close:hover {
+  transform: scale(1.1);
+  background: #da2008;
+}
 .header .handleBox .handleDetail .handle {
   height: 100%;
   background: #2118dd;

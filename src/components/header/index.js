@@ -16,10 +16,10 @@ import iconClose from './../../static/images/header/close.png';
 
 const navList = [
     {id:1,title:'经营状况',pic:iconEchart,path:'/manage'},
-    {id:51,title:'收银业务',pic:iconMoney,path:'www.baidu.com'},
-    {id:21,title:'油卡业务',pic:iconOilCard,path:'www.baidu.com'},
-    {id:45,title:'查询报表',pic:iconTable,path:'www.baidu.com'},
-    {id:16,title:'系统配置',pic:iconSys,path:'www.baidu.com'},
+    {id:51,title:'收银业务',pic:iconMoney,path:'/cashier'},
+    {id:21,title:'油卡业务',pic:iconOilCard,path:'/oilCard'},
+    {id:45,title:'查询报表',pic:iconTable,path:'/query'},
+    {id:16,title:'系统配置',pic:iconSys,path:'/system'},
 
 ]
 
@@ -32,7 +32,7 @@ class Header extends Component {
     }
     
     handleClick = (e) => {
-        console.log(e.id)
+        console.log(e.title)
         this.setState({
             current: e.id,
         });
@@ -73,7 +73,7 @@ class Header extends Component {
                         <div className="detail handle">
                             <img className="iconPic" src={iconMin} title="最小号" alt=""/>
                             <img className="iconPic" src={iconMax} title="最大化" alt=""/>
-                            <img className="iconPic" src={iconClose} title="关闭" alt=""/>
+                            <img className="iconPic close" src={iconClose} title="关闭" alt=""/>
                         </div>
                      </div>
                     <Button className="handleBtn" type="primary" shape="round" icon="profile" >

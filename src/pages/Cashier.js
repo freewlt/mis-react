@@ -4,7 +4,7 @@ import Content from '../components/content';
 import './index.css'
 import axios from 'axios';
 
-class Manage extends React.Component {
+class Cashier extends React.Component {
     constructor(props){
       super(props);
       this.state={
@@ -23,10 +23,10 @@ class Manage extends React.Component {
 		
 		componentDidMount(){
 			const _this = this;
-				axios.get('./menuLf.json').then((res) => {
+				axios.get('./cashier.json').then((res) => {
 					_this.setState({ menuList: res.data.list })
 				});
 		}
 
 }
-export default Manage;
+export default Cashier;

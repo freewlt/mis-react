@@ -4,7 +4,7 @@ import Content from '../components/content';
 import './index.css'
 import axios from 'axios';
 
-class Manage extends React.Component {
+class System extends React.Component {
     constructor(props){
       super(props);
       this.state={
@@ -16,7 +16,7 @@ class Manage extends React.Component {
         return (
             <div className="containerRt">
 								<MenuLf menuList={this.state.menuList}/>
-								<Content/>
+                <Content/>
             </div>
         );
 		}
@@ -29,4 +29,4 @@ class Manage extends React.Component {
 		}
 
 }
-export default Manage;
+export default System;

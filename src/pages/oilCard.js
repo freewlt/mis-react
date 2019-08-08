@@ -4,7 +4,7 @@ import Content from '../components/content';
 import './index.css'
 import axios from 'axios';
 
-class Manage extends React.Component {
+class Oilcard extends React.Component {
     constructor(props){
       super(props);
       this.state={
@@ -29,4 +29,4 @@ class Manage extends React.Component {
 		}
 
 }
-export default Manage;
+export default Oilcard;
