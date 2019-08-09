@@ -9,8 +9,15 @@ class MenuLf extends Component {
   constructor(props){
     super(props);
     this.state={
+      curId:''
     }
   }
+
+  handleClick = (e,item) => {
+    this.setState({
+      curId: e.id,
+    });
+  };
   
   render() {
     return (
@@ -19,12 +26,12 @@ class MenuLf extends Component {
           mode="inline" theme="dark"> 
           {
             this.props.menuList.map((item) =>{
-                const curId = this.props.location.pathname.split('/')[2];
+                // const curId = this.props.location.pathname.split('/')[2];
                 if(item.children){
-                  return <SubMenu onClick={this.handleClick} key={item.id}
+                  return <SubMenu onClick={this.handleClick.bind(this,item)} key={item.id}
                   title={
                     <span>
-                      <img className="iconPic" src={ curId === item.id ? item.mediumBg: item.medium} alt=""/>
+                      <img className="iconPic" src={ this.state.curId === item.id ? item.mediumBg: item.medium} alt=""/>
                       <span className="title">{item.name}</span>
                     </span>
                   }>
@@ -35,9 +42,9 @@ class MenuLf extends Component {
                 }
                 </SubMenu>
                 }else{
-                  return <Menu.Item key={item.id}> 
+                  return <Menu.Item key={item.id} onClick={this.handleClick.bind(this,item)}> 
                       <Link to={item.url}> 
-                        <img className={`iconPic`} src={ curId === item.id ? item.mediumBg: item.medium} alt=""/>
+                        <img className={`iconPic`} src={ this.state.curId === item.id ? item.mediumBg: item.medium} alt=""/>
                         <span className="title">{item.name}</span>
                       </Link>
                     </Menu.Item>

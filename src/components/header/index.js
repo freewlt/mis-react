@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import { Link} from 'react-router-dom';
+import { connect } from 'react-redux';
 import { Button } from 'antd';
 import './index.css';
 import Logo from './../../static/images/header/logo.png';
@@ -28,11 +29,12 @@ class Header extends Component {
         super(props);
         this.state = {
             current: 1,
+            subTitle:'',
         }
     }
     
     handleClick = (e) => {
-        console.log(e.title)
+        this.subTitle=e.title;
         this.setState({
             current: e.id,
         });
@@ -47,6 +49,7 @@ class Header extends Component {
             </Link>
         );
 
+
         return (
             <div className="header">
                 <div className="logoBox">
@@ -54,6 +57,7 @@ class Header extends Component {
                 </div>
                 <div className="menuBox">
                     {navLists}
+                    {this.props.list}
                 </div>
                 <div className="handleBox">
                      <div className="handleDetail">
@@ -85,4 +89,18 @@ class Header extends Component {
     }
 
 }
-export default Header;
+//export default Header;
+
+const mapStateToProps = (state)=>{
+    return {
+      list: state.navList.number,
+    }
+  };
+  const mapDispatchToProps = (dispatch)=>{
+    return {
+      setIncrease: (state) => dispatch(state),
+      setDecrease: (state) => dispatch(state)
+    }
+  };
+  
+  export default connect(mapStateToProps, mapDispatchToProps)(Header)

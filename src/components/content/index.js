@@ -3,6 +3,7 @@ import {Route} from 'react-router-dom';
 import Breadcrumb from '../breadcrumb';
 import Management from '../manage/management';
 import Cash from '../manage/cash';
+import Home from '../../pages/home.js';
 
 
 import Casheng from '../cashier/casheng';
@@ -20,14 +21,12 @@ class content extends Component {
 
     return (
       <div className="content">
-      
         <Breadcrumb/>
-        <Route path="/manage/" exact component={Management}></Route>
         <Route path="/manage/management" exact component={Management}></Route>
         <Route path="/manage/cash" exact component={Cash}></Route>
 
-        <Route path="/cashier/" exact component={Casheng}></Route>
         <Route path="/cashier/casheng" exact component={Casheng}></Route>
+        <Route component={Home}></Route>
        
       </div>
     );

@@ -1,11 +1,12 @@
 import React from 'react';
+import './index.css'
 
 class Home extends React.Component {
 
     render() {
         return (
-            <div>
-                欢迎进入油站管理系统！
+            <div className="home">
+                <h3>欢迎进入油站管理系统！</h3>
             </div>
         );
     }
