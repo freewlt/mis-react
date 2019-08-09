@@ -2,7 +2,7 @@ import React,{ Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { Menu } from 'antd';
-import { chooseMenu } from '../../store/actionCreators'
+import { chooseMenu } from '../../store/actionCreators';
 import './index.css';
 
 const { SubMenu } = Menu;
@@ -12,17 +12,14 @@ class MenuLf extends Component {
     super(props);
     this.state={
       curId:'',
-      name:''
     }
   }
 
   handleClick = (item) => {
     const { dispatch } = this.props;
-    console.log(this.props,'props')
     dispatch(chooseMenu(item.name))
     this.setState({
       curId: item.id,
-      name:item.name
     });
   };
   
@@ -64,7 +61,6 @@ class MenuLf extends Component {
   }
 }
 
-//export default withRouter(MenuLf);
 
 const mapStateToProps = (state)=>{
   return {
@@ -73,7 +69,7 @@ const mapStateToProps = (state)=>{
 };
 const mapDispatchToProps = (dispatch)=>{
   return {
-    // chooseMenu: (state) => dispatch(state),
+    dispatch 
   }
 };
 

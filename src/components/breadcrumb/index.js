@@ -8,7 +8,7 @@ class BreadCrumb extends Component {
     render(){
         return (
           <Breadcrumb separator=">" className="subTitle">
-            <Breadcrumb.Item>An Applicatio</Breadcrumb.Item>
+            <Breadcrumb.Item>{ this.props.menuSubName }</Breadcrumb.Item>
             <Breadcrumb.Item>{ this.props.menuName }</Breadcrumb.Item>
           </Breadcrumb>
         )

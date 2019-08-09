@@ -5,6 +5,10 @@ export const chooseMenu = (menuName)=>({
    type:constants.CHOOSE_MENU,
    menuName
 })
+export const chooseLfMenu = (menuSubName)=>({
+  type:constants.CHOOSE_Lf_MENU,
+  menuSubName
+})
 
 export const getList = () => {
   return (dispatch) => {

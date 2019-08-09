@@ -18,12 +18,16 @@ const initialState={
 
 
 export default(state = initialState, action)=> {
-    console.log(action,'action')
     switch (action.type) {
         case constants.CHOOSE_MENU:
             return {
                 ...state,
                 menuName:action.menuName
+            };
+        case constants.CHOOSE_LF_MENU:
+            return {
+                ...state,
+                menuSubName:action.menuSubName
             }
         default:
             return state;

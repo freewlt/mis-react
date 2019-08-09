@@ -3,6 +3,8 @@ import { Link} from 'react-router-dom';
 import { connect } from 'react-redux';
 import { Button } from 'antd';
 import {actionCreators}  from '../../store';
+import { chooseLfMenu } from '../../store/actionCreators';
+
 import './index.css';
 import Logo from './../../static/images/header/logo.png';
 import iconEchart from './../../static/images/header/iconEchart.png';
@@ -34,7 +36,8 @@ class Header extends Component {
     }
     
     handleClick = (e) => {
-        this.subTitle=e.title;
+        const {dispatch} = this.props;
+        dispatch(chooseLfMenu(e.title))
         this.setState({
             current: e.id,
         });
@@ -48,13 +51,6 @@ class Header extends Component {
                 <span className="title">{item.title} </span>
             </Link>
         );
-        // const navLists = this.props.list.map((item) =>
-        //     <Link className={ item.id === this.state.current ? 'active menuNav' :'menuNav' } to={item.path} key={item.id} onClick={this.handleClick.bind(this,item)}>
-        //         <img className="pic" src={item.pic} alt=""/>
-        //         <span className="title">{item.title} </span>
-        //     </Link>
-        // );
-
 
         return (
             <div className="header">
@@ -106,10 +102,7 @@ const mapStateToProps = (state)=>{
   };
   const mapDispatchToProps = (dispatch)=>{
     return {
-      setIncrease: (state) => dispatch(state),
-        handleClick(e){
-        //dispatch(actionCreators.changePage())
-     }
+      dispatch
     }
   };
   
