@@ -1,6 +1,8 @@
 import React,{ Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
 import { Menu } from 'antd';
+import { chooseMenu } from '../../store/actionCreators'
 import './index.css';
 
 const { SubMenu } = Menu;
@@ -9,13 +11,18 @@ class MenuLf extends Component {
   constructor(props){
     super(props);
     this.state={
-      curId:''
+      curId:'',
+      name:''
     }
   }
 
-  handleClick = (e,item) => {
+  handleClick = (item) => {
+    const { dispatch } = this.props;
+    console.log(this.props,'props')
+    dispatch(chooseMenu(item.name))
     this.setState({
-      curId: e.id,
+      curId: item.id,
+      name:item.name
     });
   };
   
@@ -26,9 +33,9 @@ class MenuLf extends Component {
           mode="inline" theme="dark"> 
           {
             this.props.menuList.map((item) =>{
-                // const curId = this.props.location.pathname.split('/')[2];
+                //  const curId = this.props.location.pathname.split('/')[2];
                 if(item.children){
-                  return <SubMenu onClick={this.handleClick.bind(this,item)} key={item.id}
+                  return <SubMenu key={item.id}
                   title={
                     <span>
                       <img className="iconPic" src={ this.state.curId === item.id ? item.mediumBg: item.medium} alt=""/>
@@ -57,4 +64,17 @@ class MenuLf extends Component {
   }
 }
 
-export default withRouter(MenuLf);
+//export default withRouter(MenuLf);
+
+const mapStateToProps = (state)=>{
+  return {
+    
+  }
+};
+const mapDispatchToProps = (dispatch)=>{
+  return {
+    // chooseMenu: (state) => dispatch(state),
+  }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(MenuLf)

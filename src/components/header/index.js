@@ -2,6 +2,7 @@ import React,{Component} from 'react';
 import { Link} from 'react-router-dom';
 import { connect } from 'react-redux';
 import { Button } from 'antd';
+import {actionCreators}  from '../../store';
 import './index.css';
 import Logo from './../../static/images/header/logo.png';
 import iconEchart from './../../static/images/header/iconEchart.png';
@@ -29,7 +30,6 @@ class Header extends Component {
         super(props);
         this.state = {
             current: 1,
-            subTitle:'',
         }
     }
     
@@ -48,6 +48,12 @@ class Header extends Component {
                 <span className="title">{item.title} </span>
             </Link>
         );
+        // const navLists = this.props.list.map((item) =>
+        //     <Link className={ item.id === this.state.current ? 'active menuNav' :'menuNav' } to={item.path} key={item.id} onClick={this.handleClick.bind(this,item)}>
+        //         <img className="pic" src={item.pic} alt=""/>
+        //         <span className="title">{item.title} </span>
+        //     </Link>
+        // );
 
 
         return (
@@ -57,7 +63,6 @@ class Header extends Component {
                 </div>
                 <div className="menuBox">
                     {navLists}
-                    {this.props.list}
                 </div>
                 <div className="handleBox">
                      <div className="handleDetail">
@@ -92,14 +97,19 @@ class Header extends Component {
 //export default Header;
 
 const mapStateToProps = (state)=>{
+    // console.log(state)
     return {
-      list: state.navList.number,
+      //list: state.navList,
+      list: state.number,
+      curId:state.current
     }
   };
   const mapDispatchToProps = (dispatch)=>{
     return {
       setIncrease: (state) => dispatch(state),
-      setDecrease: (state) => dispatch(state)
+        handleClick(e){
+        //dispatch(actionCreators.changePage())
+     }
     }
   };
   

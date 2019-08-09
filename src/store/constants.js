@@ -1,2 +1,1 @@
-
-export const HEADERMENU = 'home/TOGGLE_SCROLL_TOP';
+export const CHOOSE_MENU = 'CHOOSE_MENU'

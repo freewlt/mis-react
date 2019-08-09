@@ -2,8 +2,7 @@ import React from 'react';
 import  Header from './components/header';
 import {BrowserRouter,Route, Switch} from 'react-router-dom';
 import {Provider} from 'react-redux';
-import { createStore } from "redux";
-import reducers from './store/reducer.js'
+import store from './store';
 
 import Home from '../src/pages/home';
 import Manage from '../src/pages/manage';
@@ -12,7 +11,6 @@ import OilCard from '../src/pages/oilCard';
 import Query from '../src/pages/query';
 import System from '../src/pages/system';
 
-const store = createStore(reducers);
 
 class App extends React.Component {
   
