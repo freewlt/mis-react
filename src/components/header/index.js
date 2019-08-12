@@ -2,8 +2,7 @@ import React,{Component} from 'react';
 import { Link} from 'react-router-dom';
 import { connect } from 'react-redux';
 import { Button } from 'antd';
-import {actionCreators}  from '../../store';
-import { chooseLfMenu } from '../../store/actionCreators';
+import { chooseMenu, chooseLfMenu } from '../../store/actionCreators';
 
 import './index.css';
 import Logo from './../../static/images/header/logo.png';
@@ -37,7 +36,8 @@ class Header extends Component {
     
     handleClick = (e) => {
         const {dispatch} = this.props;
-        dispatch(chooseLfMenu(e.title))
+        dispatch(chooseMenu(e.title))
+        dispatch(chooseLfMenu(''))
         this.setState({
             current: e.id,
         });
@@ -93,9 +93,7 @@ class Header extends Component {
 //export default Header;
 
 const mapStateToProps = (state)=>{
-    // console.log(state)
     return {
-      //list: state.navList,
       list: state.number,
       curId:state.current
     }

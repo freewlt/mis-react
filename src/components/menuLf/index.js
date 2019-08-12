@@ -1,8 +1,8 @@
 import React,{ Component } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { Menu } from 'antd';
-import { chooseMenu } from '../../store/actionCreators';
+import { chooseLfMenu } from '../../store/actionCreators';
 import './index.css';
 
 const { SubMenu } = Menu;
@@ -17,7 +17,7 @@ class MenuLf extends Component {
 
   handleClick = (item) => {
     const { dispatch } = this.props;
-    dispatch(chooseMenu(item.name))
+    dispatch(chooseLfMenu(item.name))
     this.setState({
       curId: item.id,
     });
