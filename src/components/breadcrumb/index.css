@@ -3,3 +3,6 @@
   margin: 0 auto;
   padding: 20px 0;
 }
+.ant-breadcrumb {
+  color: blue;
+}

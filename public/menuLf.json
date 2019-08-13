@@ -12,11 +12,33 @@
       "url": "/manage/management",
       "type": "1",
       "large": "",
-      "medium": "http://192.168.0.8:8083/image/upload/image/menu/2016/07/21/p1ao6g3g9kvum632101s10ig4ee5.png",
-      "mediumBg": "http://192.168.0.8:8083/image/upload/image/menu/2016/07/21/p1ao6g3m821vu12m3o0k2eq17397.png",
+      "medium": "/images/menuLf/basicInfo.png",
+      "mediumBg": "http://192.168.0.8:8083/image/upload/image/menu/2016/07/21/p1ao6g5k97ifp15uoahj139u6p67.png",
       "thumbnail": "",
       "isParent": true,
-      "parentName": ""
+      "parentName": "",
+      "children": [
+        {
+          "id": "3741",
+          "url": "/manage/stationInfo",
+          "name": "油站信息"
+        },
+        {
+          "id": "3742",
+          "url": "/manage/oilApplication",
+          "name": "油品申请"
+        },
+        {
+          "id": "3743",
+          "url": "/manage/man",
+          "name": "油品信息"
+        },
+        {
+          "id": "3744",
+          "url": "/manage/man",
+          "name": "油罐配置"
+        }
+      ]
     },
     {
       "id": "12030099176030208",
@@ -30,7 +52,7 @@
       "url": "/manage/man",
       "type": "1",
       "large": "",
-      "medium": "http://192.168.0.8:8083/image/upload/image/menu/2016/07/21/p1ao6g5cpl4uk114qhg012b8kk75.png",
+      "medium": "images/menuLf/FuelManConfig.png",
       "mediumBg": "http://192.168.0.8:8083/image/upload/image/menu/2016/07/21/p1ao6g5k97ifp15uoahj139u6p67.png",
       "thumbnail": "",
       "isParent": true,
@@ -48,8 +70,8 @@
       "url": "/manage/cash",
       "type": "1",
       "large": "",
-      "medium": "http://192.168.0.8:8083/image/upload/image/menu/2016/07/21/p1ao6g5cpl4uk114qhg012b8kk75.png",
-      "mediumBg": "http://192.168.0.8:8083/image/upload/image/menu/2016/07/21/p1ao6g5cpl4uk114qhg012b8kk75.png",
+      "medium": "images/menuLf/payMethodConfig.png",
+      "mediumBg": "http://192.168.0.8:8083/image/upload/image/menu/2016/07/21/p1ao6g5k97ifp15uoahj139u6p67.png",
       "thumbnail": "",
       "isParent": true,
       "parentName": ""
@@ -66,7 +88,7 @@
       "url": "/admin/area/tree.jhtml",
       "type": "1",
       "large": "",
-      "medium": "http://192.168.0.8:8083/image/upload/image/menu/2016/05/19/p1aj3qe898u3t1vpti1v70dhf5.png",
+      "medium": "images/menuLf/shiftTempManage.png",
       "mediumBg": "http://192.168.0.8:8083/image/upload/image/menu/2016/05/19/p1aj3qei269j76hmovv8210iu7.png",
       "thumbnail": "",
       "isParent": true,
@@ -84,7 +106,7 @@
       "url": "/admin/areaProxy/tree.jhtml",
       "type": "1",
       "large": "",
-      "medium": "http://192.168.0.8:8083/image/upload/image/menu/2018/01/18/p1c43f3lu9bnv17131hftvkev6a5.png",
+      "medium": "images/menuLf/intelliDevManage.png",
       "mediumBg": "http://192.168.0.8:8083/image/upload/image/menu/2018/01/18/p1c43f405oko81mh21m9dvoos4e7.png",
       "thumbnail": "",
       "isParent": true,
@@ -102,7 +124,7 @@
       "url": "/admin/member/list.jhtml",
       "type": "1",
       "large": "",
-      "medium": "http://192.168.0.8:8083/image/upload/image/menu/2018/01/18/p1c43f77aar8ies8ignhshmaa5.png",
+      "medium": "images/menuLf/oilPriceManage.png",
       "mediumBg": "http://192.168.0.8:8083/image/upload/image/menu/2018/01/18/p1c43f7abtjt5138b19i214im2dt7.png",
       "thumbnail": "",
       "isParent": true,
@@ -120,7 +142,7 @@
       "url": "/admin/rechargeRule/list.jhtml",
       "type": "1",
       "large": "",
-      "medium": "http://192.168.0.8:8083/image/upload/image/menu/2018/01/18/p1c43f625m1rn4v151cgc12a86bo5.png",
+      "medium": "images/menuLf/preferStateManage.png",
       "mediumBg": "http://192.168.0.8:8083/image/upload/image/menu/2018/01/18/p1c43f65smg0hai41e9m1ms93mh7.png",
       "thumbnail": "",
       "isParent": true,
@@ -138,7 +160,7 @@
       "url": "/admin/stdCodeType/list.jhtml",
       "type": "1",
       "large": "",
-      "medium": "http://192.168.0.8:8083/image/upload/image/menu/2016/07/21/p1ao6gjabr1nkb2h71muo1b3lqur5.png",
+      "medium": "images/menuLf/unloadManage.png",
       "mediumBg": "http://192.168.0.8:8083/image/upload/image/menu/2016/07/21/p1ao6gjcjnhf7d3u118ummq1kbk7.png",
       "thumbnail": "",
       "isParent": true,
@@ -156,7 +178,7 @@
       "url": "/admin/setting/editPointSetting.jhtml",
       "type": "1",
       "large": "",
-      "medium": "http://192.168.0.8:8083/image/upload/image/menu/2016/07/21/p1ao6gjprk1hi8m9q1ma37o31t9v5.png",
+      "medium": "images/menuLf/imageManage.png",
       "mediumBg": "http://192.168.0.8:8083/image/upload/image/menu/2016/07/21/p1ao6gjshnbncp05ej51osu1l8q7.png",
       "thumbnail": "",
       "isParent": true,
@@ -174,7 +196,7 @@
       "url": "/admin/orgPaymerchant/list.jhtml",
       "type": "1",
       "large": "",
-      "medium": "http://192.168.0.8:8083/image/upload/image/menu/2018/01/15/p1c3rrp8vr135113fbj5ksmtt55.png",
+      "medium": "images/menuLf/configInfo.png",
       "mediumBg": "http://192.168.0.8:8083/image/upload/image/menu/2018/01/15/p1c3rrporu1ihn1hvktc1jb42j47.png",
       "thumbnail": "",
       "isParent": true,

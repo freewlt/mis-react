@@ -9,6 +9,10 @@ export const chooseLfMenu = (menuSubName)=>({
   type:constants.CHOOSE_LF_MENU,
   menuSubName
 })
+export const chooseLfSubMenu = (menuThiName)=>({
+  type:constants.CHOOSE_LF_SUB_MENU,
+  menuThiName
+})
 
 // export const getList = () => {
 //   return (dispatch) => {

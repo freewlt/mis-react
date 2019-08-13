@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import { Form, Select, Input, Button,Row, Col } from 'antd';
-import './index.css';
+import '../index.css';
 
 
 const { Option } = Select;
@@ -12,8 +12,6 @@ class Management extends Component {
       expand: false,
     };
   }
-  
-   
 
   
   handleSubmit = e => {

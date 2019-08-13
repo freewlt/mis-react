@@ -2,7 +2,7 @@ import React,{ Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { Menu } from 'antd';
-import { chooseLfMenu } from '../../store/actionCreators';
+import { chooseLfMenu,chooseLfSubMenu } from '../../store/actionCreators';
 import './index.css';
 
 const { SubMenu } = Menu;
@@ -15,6 +15,7 @@ class MenuLf extends Component {
     }
   }
 
+  //二级面包屑
   handleClick = (item) => {
     const { dispatch } = this.props;
     dispatch(chooseLfMenu(item.name))
@@ -22,6 +23,12 @@ class MenuLf extends Component {
       curId: item.id,
     });
   };
+
+  //三级面包屑
+  handle(item){
+    const { dispatch } = this.props;
+    dispatch(chooseLfSubMenu(item.name));
+  }
   
   render() {
     return (
@@ -32,7 +39,7 @@ class MenuLf extends Component {
             this.props.menuList.map((item) =>{
                 //  const curId = this.props.location.pathname.split('/')[2];
                 if(item.children){
-                  return <SubMenu key={item.id}
+                  return <SubMenu key={item.id} onClick={this.handleClick.bind(this,item)}
                   title={
                     <span>
                       <img className="iconPic" src={ this.state.curId === item.id ? item.mediumBg: item.medium} alt=""/>
@@ -41,7 +48,7 @@ class MenuLf extends Component {
                   }>
                 {
                   item.children.map((item,id) => (  
-                   <Menu.Item key={id}> <Link to ={item.url}> {item.name}</Link></Menu.Item> 
+                   <Menu.Item key={id}  onClick={this.handle.bind(this,item)}> <Link to ={item.url}> {item.name}</Link></Menu.Item> 
                   )) 
                 }
                 </SubMenu>
@@ -67,7 +74,7 @@ const mapStateToProps = (state)=>{
     
   }
 };
-const mapDispatchToProps = (dispatch)=>{
+const mapDispatchToProps = (dispatch)=>{ 
   return {
     dispatch 
   }

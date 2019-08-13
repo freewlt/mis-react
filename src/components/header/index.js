@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import { Link} from 'react-router-dom';
 import { connect } from 'react-redux';
 import { Button } from 'antd';
-import { chooseMenu, chooseLfMenu } from '../../store/actionCreators';
+import { chooseMenu, chooseLfMenu, chooseLfSubMenu } from '../../store/actionCreators';
 
 import './index.css';
 import Logo from './../../static/images/header/logo.png';
@@ -38,6 +38,7 @@ class Header extends Component {
         const {dispatch} = this.props;
         dispatch(chooseMenu(e.title))
         dispatch(chooseLfMenu(''))
+        dispatch(chooseLfSubMenu(''))
         this.setState({
             current: e.id,
         });

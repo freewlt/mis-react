@@ -10,6 +10,7 @@ class BreadCrumb extends Component {
           <Breadcrumb separator=">" className="subTitle">
           <Breadcrumb.Item>{ this.props.menuName }</Breadcrumb.Item>
             <Breadcrumb.Item>{ this.props.menuSubName }</Breadcrumb.Item>
+            <Breadcrumb.Item>{ this.props.menuThiName }</Breadcrumb.Item>
           </Breadcrumb>
         )
     }
@@ -20,6 +21,7 @@ const mapStateToProps = (state)=>{
   return {
     menuName:state.menuName,
     menuSubName:state.menuSubName,
+    menuThiName:state.menuThiName
   }
 };
 const mapDispatchToProps = (dispatch)=>{
