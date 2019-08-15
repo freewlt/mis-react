@@ -1,7 +1,7 @@
 .manageCon {
   width: 100%;
   height: 96%;
-  padding: 50px 0;
+  padding: 30px 0;
   background: #fff;
   overflow-y: auto;
 }
@@ -16,16 +16,128 @@
 .manageCon .subtitle a {
   font-size: 12px;
 }
-.oilApplication {
+.mainBox {
   width: 100%;
   height: 100%;
-  padding: 50px 0;
+  padding: 30px 0 100px;
   background: #fff;
   overflow-y: auto;
 }
-.oilApplication .mainCon {
+.mainBox .mainCon {
   width: 95%;
   margin: 0 auto;
+}
+.mainBox .mainCon .ant-table-pagination.ant-pagination {
+  float: none;
+  text-align: center;
+}
+.mainBox .mainCon .ant-table-thead > tr > th {
+  text-align: center;
+}
+.tankConfig {
+  padding-top: 15px;
+}
+.oilFilerConfig .oilFillerForm {
+  width: 90%;
+  padding: 20px 60px 20px 20px;
+  margin-left: 2%;
+  margin-bottom: 40px;
+  border: 1px solid #ccc;
+}
+.oilFilerConfig .oilFillerForm .ant-col {
+  padding: 0 10px;
+}
+.oilFilerConfig .oilFillerForm .tankNoSelect .ant-form-item-control {
+  width: 80px;
+}
+.oilFilerConfig .oilFillerForm input {
+  width: 50%;
+  margin-right: 10px;
+}
+.oilFilerConfig .oilFillerForm .edit {
+  justify-content: flex-end;
+}
+.conditionGroup {
+  padding: 15px 0;
+}
+.orderQuery .timeBox .ant-calendar-picker {
+  width: 174px;
+  min-width: auto!important;
+}
+.orderQuery .timeBox .ant-calendar-picker:first-child {
+  margin-right: 10px;
+}
+.orderQuery .timeBox .ant-calendar-picker:last-child {
+  margin-left: 10px;
+}
+.orderQuery .ant-tag-checkable {
+  background-color: transparent;
+  border-color: transparent;
+  padding: 6px 20px;
+  border: 1px solid #ccc;
+}
+.orderQuery .ant-tag-checkable-checked {
+  border-color: #278bf6;
+  color: rgba(0, 0, 0, 0.65);
+  background: #f1f8ff;
+}
+.orderQuery .ant-col-24 {
+  display: flex;
+  justify-content: flex-start;
+}
+.orderQuery .ant-col-24 .ant-form-item {
+  padding-right: 50px;
+}
+.orderQuery .ant-col-24 .selectBox {
+  width: 197px;
+}
+.orderQuery .ant-col-24 .oilSelect {
+  width: 382px;
+}
+.orderQuery .handleBtn {
+  display: flex;
+  justify-content: center;
+  white-space: nowrap;
+}
+.orderQuery .handleBtn button {
+  margin-left: 10px;
+}
+.orderQuery .handleBtn .resetBtn {
+  border-color: #10c99d;
+  background: #10c99d;
+}
+.cardManage .ant-col-24 {
+  display: flex;
+  justify-content: flex-start;
+}
+.cardManage .ant-col-24 .ant-form-item {
+  width: 50%;
+  padding-right: 50px;
+}
+.cardManage .ant-col-24 .handleBtn {
+  display: flex;
+  justify-content: flex-start;
+}
+.cardManage .ant-col-24 .handleBtn button {
+  padding: 5px 40px;
+  margin-right: 10px;
+  box-sizing: content-box;
+}
+.cardManage .ant-col-24 .handleBtn .readBtn {
+  background: #10c99d;
+  border-color: #10c99d;
+}
+.cardManage .ant-col-24 .handleBtn .readBtn:hover {
+  background: #76e4ca;
+  border-color: #76e4ca;
+}
+.cardManage .ant-col-24 .handleBtn .areaBtn {
+  background: #ff9d4c;
+  border-color: #ff9d4c;
+}
+.cardManage .ant-col-24 .handleBtn .areaBtn:hover {
+  background: #f7ad70;
+  border-color: #f7ad70;
 }
 .iconBtn {
   margin: 0 5px;
@@ -34,27 +146,92 @@
   display: flex;
   justify-content: center;
 }
-.iconBtnGroup .lookBtn {
+.iconBtnGroup .lookIcon {
   display: block;
   width: 38px;
   height: 20px;
   background: url('../../static/images/operate/look.png') no-repeat;
 }
-.iconBtnGroup .editBtn {
+.iconBtnGroup .editIcon {
   display: block;
   width: 38px;
   height: 20px;
   background: url('../../static/images/operate/edit.png') no-repeat;
 }
-.iconBtnGroup .enableBtn {
+.iconBtnGroup .enableIcon {
   display: block;
   width: 38px;
   height: 20px;
   background: url('../../static/images/operate/enable.png') no-repeat;
 }
-.iconBtnGroup .disableBtn {
+.iconBtnGroup .disableIcon {
   display: block;
   width: 38px;
   height: 20px;
   background: url('../../static/images/operate/disable.png') no-repeat;
+}
+.iconBtnGroup .printIcon {
+  display: block;
+  width: 38px;
+  height: 20px;
+  background: url('../../static/images/operate/print.png') no-repeat;
+}
+.ant-btn-primary {
+  border-radius: 20px;
+  background: #1863fd;
+  border-color: #1863fd;
+}
+.ant-btn-danger {
+  border-radius: 20px;
+}
+.ant-btn > span {
+  vertical-align: middle;
+}
+.determineIcon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
+  margin-left: 10px;
+  background: url(../../static/images/btn/determine.png) no-repeat;
+}
+.resetIcon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
+  margin-left: 10px;
+  background: url(../../static/images/btn/reset.png) no-repeat;
+}
+.editIcon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
+  margin-left: 10px;
+  background: url(../../static/images/btn/edit.png) no-repeat;
+}
+.printIcon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
+  margin-left: 10px;
+  background: url(../../static/images/btn/print.png) no-repeat;
+}
+.searchIcon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
+  margin-left: 10px;
+  background: url(../../static/images/btn/search.png) no-repeat;
+}
+.newIcon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
+  margin-left: 10px;
+  background: url(../../static/images/btn/new.png) no-repeat;
 }

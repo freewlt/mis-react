@@ -9,7 +9,7 @@
       "name": "油站基础信息",
       "parentId": "12029684246118400",
       "remark": "用户管理",
-      "url": "/manage/basic/stationInfo",
+      "url": "/system/basic/stationInfo",
       "type": "1",
       "large": "",
       "medium": "/images/menuLf/basicInfo.png",
@@ -20,27 +20,27 @@
       "children": [
         {
           "id": "3741",
-          "url": "/manage/basic/stationInfo",
+          "url": "/system/basic/stationInfo",
           "name": "油站信息"
         },
         {
           "id": "3742",
-          "url": "/manage/basic/oilApplication",
+          "url": "/system/basic/oilApplication",
           "name": "油品申请"
         },
         {
           "id": "3743",
-          "url": "/manage/basic/oilInfo",
+          "url": "/system/basic/oilInfo",
           "name": "油品信息"
         },
         {
           "id": "3744",
-          "url": "/manage/basic/tankConfig",
+          "url": "/system/basic/tankConfig",
           "name": "油罐配置"
         },
         {
           "id": "3745",
-          "url": "/manage/basic/oilFillerConfig",
+          "url": "/system/basic/oilFillerConfig",
           "name": "加油点配置"
         }
       ]
@@ -72,7 +72,7 @@
       "name": "支付方式配置",
       "parentId": "12029684246118400",
       "remark": "权限管理",
-      "url": "/manage/payMethod/payMethod",
+      "url": "/system/payMethod/payMethod",
       "type": "1",
       "large": "",
       "medium": "images/menuLf/payMethodConfig.png",
@@ -205,7 +205,7 @@
       "name": "配置信息",
       "parentId": "12029684246118400",
       "remark": "油站支付配置",
-      "url": "/manage/config/configInfo",
+      "url": "/system/config/configInfo",
       "type": "1",
       "large": "",
       "medium": "images/menuLf/configInfo.png",

@@ -63,19 +63,21 @@ class Header extends Component {
                 </div>
                 <div className="handleBox">
                      <div className="handleDetail">
-                        <div className="detail">
-                            <img className="iconPic" src={cashier} title="收银员" alt=""/>
-                            <span className="title">收银员：</span>
-                            <span className="title">0070*10-赵奕欢</span>
-                        </div>
-                        <div className="detail">
-                            <span className="title">班次号：</span>
-                            <span className="title">0070*10081245</span>
-                        </div>
-                        <div className="detail">
-                            <span className="title">班次：</span>
-                            <span className="title">中班-已上班</span>
-                        </div>
+                        <marquee className="handleDeCon">
+                            <div className="detail">
+                                <img className="iconPic" src={cashier} title="收银员" alt=""/>
+                                <span className="title">收银员：</span>
+                                <span className="title">0070*10-赵奕欢</span>
+                            </div>
+                            <div className="detail">
+                                <span className="title">班次号：</span>
+                                <span className="title">0070*10081245</span>
+                            </div>
+                            <div className="detail">
+                                <span className="title">班次：</span>
+                                <span className="title">中班-已上班</span>
+                            </div>
+                        </marquee>
                         <div className="detail handle">
                             <img className="iconPic" src={iconMin} title="最小号" alt=""/>
                             <img className="iconPic" src={iconMax} title="最大化" alt=""/>

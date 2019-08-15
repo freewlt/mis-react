@@ -1,7 +1,8 @@
+//油站基础信息
 .manageCon{
   width:100%;
   height: 96%;
-  padding:50px 0;
+  padding:30px 0;
   background: #fff;
   overflow-y: auto;
   .subtitle{
@@ -17,46 +18,252 @@
   }
 }
 
-.oilApplication{
+.mainBox{
   width:100%;
   height: 100%;
-  padding:50px 0;
+  padding: 30px 0 100px;
   background: #fff;
   overflow-y: auto;
   .mainCon{
     width:95%;
     margin:0 auto;
+    .ant-table-pagination.ant-pagination {
+      float: none; 
+      text-align: center;
+    }
+    .ant-table-thead > tr > th{
+      text-align: center;
+    }
+  }
+}
+// 油品申请
+.oilApplication{
+}
+
+// 油罐配置
+.tankConfig{
+  padding-top: 15px;
+}
+
+//加油点配置
+.oilFilerConfig{
+  .oilFillerForm{
+    width:90%;
+    padding:20px 60px 20px 20px;
+    margin-left:2%;
+    margin-bottom:40px;
+    border:1px solid #ccc;
+    .ant-col{
+      padding: 0 10px;
+    }
+    .tankNoSelect{
+      .ant-form-item-control{
+        width: 80px;
+      }
+    }
+    input{
+      width:50%;
+      margin-right:10px;
+    }
+    .edit{
+      justify-content: flex-end;
+    }
   }
 }
 
+//条件刷选按钮组
+.conditionGroup{
+  padding: 15px 0;
+}
+
+//订单查询
+.orderQuery{
+  .timeBox{
+    .ant-calendar-picker{
+      width:174px;
+      min-width: auto!important;
+    }
+    .ant-calendar-picker:first-child{
+      margin-right:10px;
+    }
+    .ant-calendar-picker:last-child{
+      margin-left:10px;
+    }
+  }
+  .ant-tag-checkable {
+    background-color: transparent;
+    border-color: transparent;
+    padding: 6px 20px;
+    border: 1px solid #ccc;
+  }
+  .ant-tag-checkable-checked {
+    border-color: #278bf6;
+    color: rgba(0, 0, 0, 0.65);
+    background: #f1f8ff;
+  }
+  .ant-col-24 {
+    display: flex;
+    justify-content: flex-start;
+    .ant-form-item{
+      padding-right:50px;
+    }
+    .selectBox{
+      width:197px;
+    }
+    .oilSelect{
+      width:382px;
+    }
+
+}
+  .handleBtn{
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
+    button{
+      margin-left: 10px;
+      
+    }
+    .resetBtn{
+      border-color: #10c99d;
+      background: #10c99d;
+    }
+  }
+}
+
+//油卡业务
+.cardManage{
+  .ant-col-24 {
+    display: flex;
+    justify-content: flex-start;
+    .ant-form-item{
+      width:50%;
+      padding-right:50px;
+    }
+    .handleBtn{
+      display: flex;
+      justify-content: flex-start;
+      button{   
+        padding: 5px 40px;
+        margin-right: 10px;
+        box-sizing: content-box;
+      }
+      .readBtn{
+        background: #10c99d;
+        border-color: #10c99d;
+        &:hover{
+          background: #76e4ca;
+          border-color: #76e4ca;
+        }
+      }
+      .areaBtn{
+        background: #ff9d4c;
+        border-color: #ff9d4c;
+        &:hover{
+          background: #f7ad70;
+          border-color: #f7ad70;
+        }
+      }
+    }
+  }
+}
+
+//table的icon
 .iconBtn{
   margin:0 5px;
 }
 .iconBtnGroup{
     display: flex;
     justify-content: center;
-  .lookBtn{
+  .lookIcon{
     display: block;
     width: 38px;
     height:20px;
     background: url('../../static/images/operate/look.png') no-repeat;
   }
-  .editBtn{
+  .editIcon{
     display: block;
     width: 38px;
     height:20px;
     background: url('../../static/images/operate/edit.png') no-repeat;
   }
-  .enableBtn{
+  .enableIcon{
     display: block;
     width: 38px;
     height:20px;
     background: url('../../static/images/operate/enable.png') no-repeat;
   }
-  .disableBtn{
+  .disableIcon{
     display: block;
     width: 38px;
     height:20px;
     background: url('../../static/images/operate/disable.png') no-repeat;
   }
+  .printIcon{
+    display: block;
+    width: 38px;
+    height:20px;
+    background: url('../../static/images/operate/print.png') no-repeat;
+  }
+}
+
+.ant-btn-primary{
+  border-radius: 20px;
+  background: #1863fd;
+  border-color: #1863fd;
+}
+.ant-btn-danger{
+  border-radius: 20px;
+}
+
+//按钮icon
+.ant-btn > span{
+  vertical-align: middle
+}
+.determineIcon{
+  display: inline-block;
+  vertical-align: middle;
+  width:12px;
+  height:12px;
+  margin-left:10px;
+  background: url(../../static/images/btn/determine.png) no-repeat;
+}
+.resetIcon{
+  display: inline-block;
+  vertical-align: middle;
+  width:12px;
+  height:12px;
+  margin-left:10px;
+  background: url(../../static/images/btn/reset.png) no-repeat;
+}
+.editIcon{
+  display: inline-block;
+  vertical-align: middle;
+  width:12px;
+  height:12px;
+  margin-left:10px;
+  background: url(../../static/images/btn/edit.png) no-repeat;
+}
+.printIcon{
+  display: inline-block;
+  vertical-align: middle;
+  width:12px;
+  height:12px;
+  margin-left:10px;
+  background: url(../../static/images/btn/print.png) no-repeat;
+}
+.searchIcon{
+  display: inline-block;
+  vertical-align: middle;
+  width:12px;
+  height:12px;
+  margin-left:10px;
+  background: url(../../static/images/btn/search.png) no-repeat;
+}
+.newIcon{
+  display: inline-block;
+  vertical-align: middle;
+  width:12px;
+  height:12px;
+  margin-left:10px;
+  background: url(../../static/images/btn/new.png) no-repeat;
 }

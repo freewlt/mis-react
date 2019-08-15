@@ -1,63 +1,18 @@
 {
   "list": [
     {
-      "id": "12029857621868544",
-      "createDate": "2016-05-16 15:26:44",
-      "modifyDate": "2016-07-21 18:40:24",
-      "flag": true,
-      "orders": "1",
-      "name": "油站基础信息",
-      "parentId": "12029684246118400",
-      "remark": "用户管理",
-      "url": "/manage/basic/stationInfo",
-      "type": "1",
-      "large": "",
-      "medium": "/images/menuLf/basicInfo.png",
-      "mediumBg": "http://192.168.0.8:8083/image/upload/image/menu/2016/07/21/p1ao6g3m821vu12m3o0k2eq17397.png",
-      "thumbnail": "",
-      "isParent": true,
-      "parentName": "",
-      "children": [
-        {
-          "id": "3741",
-          "url": "/manage/basic/stationInfo",
-          "name": "油站信息"
-        },
-        {
-          "id": "3742",
-          "url": "/manage/basic/oilApplication",
-          "name": "油品申请"
-        },
-        {
-          "id": "3743",
-          "url": "/manage/basic/oilInfo",
-          "name": "油品信息"
-        },
-        {
-          "id": "3744",
-          "url": "/manage/basic/tankConfig",
-          "name": "油罐配置"
-        },
-        {
-          "id": "3745",
-          "url": "/manage/basic/oilFillerConfig",
-          "name": "加油点配置"
-        }
-      ]
-    },
-    {
       "id": "12030099176030208",
       "createDate": "2016-05-16 15:27:42",
       "modifyDate": "2016-07-21 18:31:47",
       "flag": true,
       "orders": "2",
-      "name": "加油员配置",
+      "name": "订单查询",
       "parentId": "12029684246118400",
       "remark": "角色管理",
-      "url": "/manage/man",
+      "url": "/query/order/orderQuery",
       "type": "1",
       "large": "",
-      "medium": "images/menuLf/FuelManConfig.png",
+      "medium": "images/menuLf/orderQuery.png",
       "mediumBg": "http://192.168.0.8:8083/image/upload/image/menu/2016/07/21/p1ao6g5k97ifp15uoahj139u6p67.png",
       "thumbnail": "",
       "isParent": true,

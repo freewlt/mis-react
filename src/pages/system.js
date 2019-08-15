@@ -23,7 +23,7 @@ class System extends React.Component {
 		
 		componentDidMount(){
 			const _this = this;
-				axios.get('./menuLf.json').then((res) => {
+				axios.get('./system.json').then((res) => {
 					_this.setState({ menuList: res.data.list })
 				});
 		}

@@ -39,21 +39,29 @@ body{
     }
   }
   .handleBox{
+    position: relative;
     width:40%;
     height: 100%;
     text-align: center;
     .handleDetail{
+      position: absolute;
+      right: 0;
+      top: 0;
       display: flex;
       justify-content: space-between;
       align-items:center;
       width:100%;
-      max-height:40px;
+      max-height:30px;
       background: #187ffd;
-      .detail{
+      .handleDeCon{
         display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        padding:5px 0;
+        justify-content: space-between;
+        align-items:center;
+      }
+      .detail{
+        display: inline-block;
+        vertical-align: middle;
+        padding:5px 10px;
         color: #fff;
         .iconPic{
           padding:0 5px;
@@ -65,12 +73,13 @@ body{
         }
       }
       .handle{
+        width: 130px;
         height: 100%;
         background: #2118dd;
       }
     }
     .handleBtn{
-      margin-top: 15px;
+      margin-top: 42px;
       border-color: #fff;
       background:#1863fd;
     }

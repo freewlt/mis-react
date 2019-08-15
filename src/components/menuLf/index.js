@@ -47,8 +47,8 @@ class MenuLf extends Component {
                     </span>
                   }>
                 {
-                  item.children.map((item,id) => (  
-                   <Menu.Item key={id}  onClick={this.handle.bind(this,item)}> <Link to ={item.url}> {item.name}</Link></Menu.Item> 
+                  item.children.map((item) => (  
+                   <Menu.Item key={item.id}  onClick={this.handle.bind(this,item)}> <Link to ={item.url}> {item.name}</Link></Menu.Item> 
                   )) 
                 }
                 </SubMenu>

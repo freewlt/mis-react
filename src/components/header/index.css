@@ -40,23 +40,31 @@ body {
   background: url('../../static/images/header/bg.png');
 }
 .header .handleBox {
+  position: relative;
   width: 40%;
   height: 100%;
   text-align: center;
 }
 .header .handleBox .handleDetail {
+  position: absolute;
+  right: 0;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-height: 40px;
+  max-height: 30px;
   background: #187ffd;
 }
-.header .handleBox .handleDetail .detail {
+.header .handleBox .handleDetail .handleDeCon {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
-  padding: 5px 0;
+}
+.header .handleBox .handleDetail .detail {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 5px 10px;
   color: #fff;
 }
 .header .handleBox .handleDetail .detail .iconPic {
@@ -68,11 +76,12 @@ body {
   background: #da2008;
 }
 .header .handleBox .handleDetail .handle {
+  width: 130px;
   height: 100%;
   background: #2118dd;
 }
 .header .handleBox .handleBtn {
-  margin-top: 15px;
+  margin-top: 42px;
   border-color: #fff;
   background: #1863fd;
 }
