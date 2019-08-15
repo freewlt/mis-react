@@ -16,7 +16,7 @@ class BreadCrumb extends Component {
     }
 }
 
-//export default BreadCrumb;
+
 const mapStateToProps = (state)=>{
   return {
     menuName:state.menuName,

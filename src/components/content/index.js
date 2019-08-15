@@ -8,7 +8,9 @@ import OilInfo from '../../pages/manage/basic/oilInfo';
 import TankConfig from '../../pages/manage/basic/tankConfig';
 import OilFillerConfig from '../../pages/manage/basic/oilFillerConfig';
 import ConfigInfo from '../../pages/manage/config/configInfo';
-import PayMethod from '../../pages/manage/payMethod/payMethod'
+import PayMethod from '../../pages/manage/payMethod/payMethod';
+import OperateConfig from '../../pages/manage/operatorConfig/operateConfig';
+import IntendManually from '../../pages/manage/oilPrice/intendManually';
 
 import ShiftList from '../../pages/manage/shiftTemplate/index';
 
@@ -46,12 +48,8 @@ class content extends Component {
           <Route path="/manage/basic/oilFillerConfig" exact component={OilFillerConfig}></Route>
           <Route path="/manage/config/configInfo" exact component={ConfigInfo}></Route>
           <Route path="/manage/payMethod/payMethod" exact component={PayMethod}></Route>
+          <Route path="/manage/operatorConfig/operateConfig" exact component={OperateConfig}></Route>
           
-
-          {
-            //收银业务
-          }
-          <Route path="/manage/shiftTemplate/shiftList" exact component={ShiftList}></Route>
           
           {
             //查询报表
@@ -75,6 +73,9 @@ class content extends Component {
           <Route path="/system/basic/oilFillerConfig" exact component={OilFillerConfig}></Route>
           <Route path="/system/config/configInfo" exact component={ConfigInfo}></Route>
           <Route path="/system/payMethod/payMethod" exact component={PayMethod}></Route>
+          <Route path="/system/shiftTemplate/shiftList" exact component={ShiftList}></Route>
+          <Route path="/system/operatorConfig/operateConfig" exact component={OperateConfig}></Route>
+          <Route path="/system/oilPrice/intendManually" exact component={IntendManually}></Route>
 
           <Route component={Home}></Route>
        

@@ -54,7 +54,7 @@
       "name": "加油员配置",
       "parentId": "12029684246118400",
       "remark": "角色管理",
-      "url": "/manage/man",
+      "url": "/system/operatorConfig/operateConfig",
       "type": "1",
       "large": "",
       "medium": "images/menuLf/FuelManConfig.png",
@@ -101,7 +101,7 @@
       "children": [
         {
           "id": "375441452",
-          "url": "/manage/shiftTemplate/shiftList",
+          "url": "/system/shiftTemplate/shiftList",
           "name": "班次列表"
         }
       ]
@@ -133,14 +133,31 @@
       "name": "油品价格管理",
       "parentId": "12029684246118400",
       "remark": "会员管理",
-      "url": "/admin/member/list.jhtml",
+      "url": "/system/oilPrice/intendManually",
       "type": "1",
       "large": "",
       "medium": "images/menuLf/oilPriceManage.png",
       "mediumBg": "http://192.168.0.8:8083/image/upload/image/menu/2018/01/18/p1c43f7abtjt5138b19i214im2dt7.png",
       "thumbnail": "",
       "isParent": true,
-      "parentName": ""
+      "parentName": "",
+      "children": [
+        {
+          "id": "3754414521",
+          "url": "/system/oilPrice/intendManually",
+          "name": "油品变价记录"
+        },
+        {
+          "id": "3754414522",
+          "url": "/system/oilPrice/intendManually",
+          "name": "手动变价申请"
+        },
+        {
+          "id": "3754414523",
+          "url": "/manage/oilPrice/intendManually",
+          "name": "油品价格配置"
+        }
+      ]
     },
     {
       "id": "132365441262682112",

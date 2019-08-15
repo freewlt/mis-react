@@ -13,6 +13,10 @@ export const chooseLfSubMenu = (menuThiName)=>({
   type:constants.CHOOSE_LF_SUB_MENU,
   menuThiName
 })
+export const isShow = (visible)=>({
+    type:constants.IS_SHOW,
+    visible
+})
 
 // export const getList = () => {
 //   return (dispatch) => {

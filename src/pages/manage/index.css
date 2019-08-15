@@ -57,8 +57,14 @@
 .oilFilerConfig .oilFillerForm .edit {
   justify-content: flex-end;
 }
+.operateConfig {
+  padding-top: 15px;
+}
 .conditionGroup {
   padding: 15px 0;
+}
+.conditionGroup button {
+  margin-right: 10px;
 }
 .orderQuery .timeBox .ant-calendar-picker {
   width: 174px;

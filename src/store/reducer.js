@@ -6,7 +6,8 @@ const initialState={
     menuThiName:'',
     number:5,
     subTitle:'156',
-    current: 1
+    current: 1,
+    visible:false,
 };
 
 
@@ -26,8 +27,14 @@ export default(state = initialState, action)=> {
             return {
                 ...state,
                 menuThiName:action.menuThiName
+            };
+        case constants.IS_SHOW:
+            return {
+                ...state,
+                visible:action.visible,
             }
         default:
             return state;
     }
+
 }
