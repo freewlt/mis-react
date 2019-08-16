@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import { Table, Form, Row, Col, Button } from 'antd';
+import { Table, Row, Col, Button } from 'antd';
 import reqwest from 'reqwest';
 import { connect } from 'react-redux';
 import ModalBox from '../../../components/modal/modal';

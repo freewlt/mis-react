@@ -1,5 +1,5 @@
 //油站基础信息
-.manageCon{
+.stationInfo{
   width:100%;
   height: 96%;
   padding:30px 0;
@@ -15,6 +15,10 @@
     a{
       font-size: 12px
     }
+  }
+  .btnGroup{
+    display: inherit;
+    justify-content: inherit;
   }
 }
 
@@ -35,9 +39,6 @@
       text-align: center;
     }
   }
-}
-// 油品申请
-.oilApplication{
 }
 
 // 油罐配置
@@ -97,7 +98,6 @@
   }
   .ant-tag-checkable {
     background-color: transparent;
-    border-color: transparent;
     padding: 6px 20px;
     border: 1px solid #ccc;
   }
@@ -171,6 +171,35 @@
     }
   }
 }
+//优惠策略
+.preferenPolicies{
+  .selectBox{
+    width:200px;
+  }
+}
+.unloadHandle{
+  .ant-form-item-control-wrapper{
+    width:100%;
+    .ant-form-item-control{
+      width:80%;
+      .ant-form-item-children{
+        display: flex;
+        justify-content: flex-start;
+        .unit{
+          padding-left: 10px;
+        }
+      }
+    }
+  }
+  .unloadFormStart{
+    padding-bottom:50px;
+    border-bottom:1px solid #ccc;
+  }
+  .unloadFormEnd{
+    padding-top:50px;
+    padding-bottom:50px;
+  }
+}
 
 //table的icon
 .iconBtn{
@@ -209,6 +238,12 @@
     height:20px;
     background: url('../../static/images/operate/print.png') no-repeat;
   }
+  .configPriceGroupIcon{
+    display: block;
+    width: 38px;
+    height:20px;
+    background: url('../../static/images/operate/configPriceGroup.png') no-repeat;
+  }
 }
 
 .ant-btn-primary{
@@ -219,6 +254,7 @@
 .ant-btn-danger{
   border-radius: 20px;
 }
+
 
 //按钮icon
 .ant-btn > span{

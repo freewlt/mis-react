@@ -8,9 +8,9 @@
   overflow-y: auto;
 }
 .contentLf .menuBox .iconPic {
-  width: 24px;
-  height: 20px;
-  padding-right: 5px;
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
 }
 .contentLf .menuBox .title {
   display: inline-block;

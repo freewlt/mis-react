@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
-import { Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { Button } from 'antd';
+import { Button, Select } from 'antd';
 import { chooseMenu, chooseLfMenu, chooseLfSubMenu } from '../../store/actionCreators';
 
 import './index.css';
@@ -16,7 +16,7 @@ import iconMin from './../../static/images/header/min.png';
 import iconMax from './../../static/images/header/max.png';
 import iconClose from './../../static/images/header/close.png';
 
-
+const { Option } = Select;
 const navList = [
     {id:1,title:'经营状况',pic:iconEchart,path:'/manage'},
     {id:51,title:'收银业务',pic:iconMoney,path:'/cashier'},
@@ -84,9 +84,16 @@ class Header extends Component {
                             <img className="iconPic close" src={iconClose} title="关闭" alt=""/>
                         </div>
                      </div>
-                    <Button className="handleBtn" type="primary" shape="round" icon="profile" >
-                        上班
-                    </Button>
+                    <div className="handleBtnBox">
+                        <Button className="handleBtn" type="primary" shape="round" >
+                            上班
+                            <span className="duty"></span>
+                        </Button>
+                        <Select className="selectLanguage" placeholder="CH">
+                            <Option value="CHINA">CHINA</Option>
+                            <Option value="English">English</Option>
+                        </Select>
+                    </div>
                 </div>
             </div>
         )

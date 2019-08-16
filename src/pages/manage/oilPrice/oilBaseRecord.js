@@ -1,46 +1,46 @@
 import React,{Component} from 'react';
-import { Table, Form, Row, Col, Button } from 'antd';
+import { Table, Form } from 'antd';
 import reqwest from 'reqwest';
 import '../index.css';
+import SearchCriteria from '../../../components/searchCriteria/index'
 
   
 const columns = [
     {
         title: '状态',
-        dataIndex: 'tankNo',
-    },
-    {
-        title: '手动变价名称',
         dataIndex: 'key',
     },
     {
+        title: '变价申请名称',
+        dataIndex: 'no',
+    },
+    {
         title: '变价申请单号',
-        dataIndex: 'num',
+        dataIndex: 'name',
     },
     {
         title: '生效日期',
-        dataIndex: 'capacity',
+        dataIndex: 'startTime',
     },
-    
     {
         title: '失效日期',
-        dataIndex: 'height',
+        dataIndex: 'endTime',
     },
     {
         title: '生效时间',
-        dataIndex: 'LPM',
+        dataIndex: 'oilSys',
     },
     {
         title: '失效时间',
-        dataIndex: 'rongLiang',
+        dataIndex: 'oilSyse',
     },
     {
         title: '优先级',
-        dataIndex: 'state',
+        dataIndex: 'oilSwys',
     },
     {
         title: '申请时间',
-        dataIndex: 'refreshtime',
+        dataIndex: 'oilSeys',
     },
     {
         title: '操作',
@@ -48,13 +48,12 @@ const columns = [
         render: (text, record) =>(
             <div className="iconBtnGroup">
                 <a href="javascript:;" title='查看详情' className="iconBtn lookIcon"></a>
-                <a href="javascript:;" title='编辑' className="iconBtn editIcon"></a>
             </div>
         ),
     },
   ];
 
-class IntendManually extends Component {
+class OilBaseRecord extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -109,16 +108,9 @@ class IntendManually extends Component {
 
     render() {
         return (
-        <div className="mainBox tankConfig">
+        <div className="mainBox shiftList">
             <div className="mainCon">
-                <Row className="conditionGroup">
-                    <Col>
-                        <Button className="addBtn" type="primary">
-                            新建
-                            <span className="newIcon"></span>
-                        </Button>
-                    </Col>
-                </Row>
+                <SearchCriteria/>
                 <Table
                 columns={columns}
                 rowKey={record => record.login.uuid}
@@ -133,7 +125,5 @@ class IntendManually extends Component {
         </div>
         );
   }
-
-  
 }
-export default  Form.create({ name: 'coordinated' })(IntendManually);
+export default  Form.create({ name: 'coordinated' })(OilBaseRecord);

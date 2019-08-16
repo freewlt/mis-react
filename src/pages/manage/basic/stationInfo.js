@@ -35,7 +35,7 @@ class StationInfo extends Component {
     const { getFieldDecorator } = this.props.form;
 
     return (
-      <div className="manageCon">
+      <div className="stationInfo">
           <Form labelCol={{ span: 5 }} wrapperCol={{ span: 12 }} onSubmit={this.handleSubmit}>
             <Row>
               <Col span={12}>
@@ -118,8 +118,8 @@ class StationInfo extends Component {
                 </Form.Item>
               </Col>
             </Row>
-            <Row>
-              <Form.Item wrapperCol={{ span: 24, offset: 24 }}>
+            <Row className="btnGroup">
+              <Form.Item wrapperCol={{  offset: 2 }}>
                 <Button type="primary" htmlType="submit">
                   确定
                   <span className="determineIcon"></span>

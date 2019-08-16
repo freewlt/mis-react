@@ -1,46 +1,43 @@
 import React,{Component} from 'react';
-import { Table, Form, Row, Col, Button } from 'antd';
+import { 
+    Tabs, Table,
+    Form,} from 'antd';
 import reqwest from 'reqwest';
 import '../index.css';
 
-  
+const { TabPane } = Tabs;
 const columns = [
     {
         title: '状态',
-        dataIndex: 'tankNo',
-    },
-    {
-        title: '手动变价名称',
         dataIndex: 'key',
     },
     {
+        title: '变价申请名称',
+        dataIndex: 'oilSys',
+    },
+    {
         title: '变价申请单号',
-        dataIndex: 'num',
+        dataIndex: 'oilNum',
     },
     {
         title: '生效日期',
-        dataIndex: 'capacity',
+        dataIndex: 'state',
     },
-    
     {
         title: '失效日期',
-        dataIndex: 'height',
+        dataIndex: 'state',
     },
     {
         title: '生效时间',
-        dataIndex: 'LPM',
+        dataIndex: 'state',
     },
     {
         title: '失效时间',
-        dataIndex: 'rongLiang',
+        dataIndex: 'state',
     },
     {
         title: '优先级',
         dataIndex: 'state',
-    },
-    {
-        title: '申请时间',
-        dataIndex: 'refreshtime',
     },
     {
         title: '操作',
@@ -48,13 +45,13 @@ const columns = [
         render: (text, record) =>(
             <div className="iconBtnGroup">
                 <a href="javascript:;" title='查看详情' className="iconBtn lookIcon"></a>
-                <a href="javascript:;" title='编辑' className="iconBtn editIcon"></a>
+                <a href="javascript:;" title='配置价格组' className="iconBtn configPriceGroupIcon"></a>
             </div>
         ),
     },
-  ];
+];
 
-class IntendManually extends Component {
+class OilPrice extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -63,7 +60,7 @@ class IntendManually extends Component {
             loading: false,
         };
     }
-    
+
     componentDidMount() {
         this.fetch();
     }
@@ -109,31 +106,28 @@ class IntendManually extends Component {
 
     render() {
         return (
-        <div className="mainBox tankConfig">
+        <div className="mainBox cardManage">
             <div className="mainCon">
-                <Row className="conditionGroup">
-                    <Col>
-                        <Button className="addBtn" type="primary">
-                            新建
-                            <span className="newIcon"></span>
-                        </Button>
-                    </Col>
-                </Row>
-                <Table
-                columns={columns}
-                rowKey={record => record.login.uuid}
-                dataSource={this.state.data}
-                pagination={this.state.pagination}
-                loading={this.state.loading}
-                onChange={this.handleTableChange}
-                />
+                <Tabs>
+                    <TabPane tab="油品价格配置" key="1">
+                        <Table
+                            columns={columns}
+                            rowKey={record => record.login.uuid}
+                            dataSource={this.state.data}
+                            pagination={this.state.pagination}
+                            loading={this.state.loading}
+                            onChange={this.handleTableChange}
+                        />
+                    </TabPane>
+                    <TabPane tab="配置价格组" key="2">
+                    Content of tab 2
+                    </TabPane>
+                </Tabs>
             </div>
-
-
         </div>
         );
   }
 
   
 }
-export default  Form.create({ name: 'coordinated' })(IntendManually);
+export default  Form.create({ name: 'coordinated' })(OilPrice);

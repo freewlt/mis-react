@@ -1,20 +1,36 @@
 import React,{Component} from 'react';
 import {Route} from 'react-router-dom';
 import Breadcrumb from '../breadcrumb';
-
+//油站基础信息
 import StationInfo from '../../pages/manage/basic/stationInfo';
 import OilApplication from '../../pages/manage/basic/oilApplication';
 import OilInfo from '../../pages/manage/basic/oilInfo';
 import TankConfig from '../../pages/manage/basic/tankConfig';
 import OilFillerConfig from '../../pages/manage/basic/oilFillerConfig';
-import ConfigInfo from '../../pages/manage/config/configInfo';
-import PayMethod from '../../pages/manage/payMethod/payMethod';
+//加油员配置
 import OperateConfig from '../../pages/manage/operatorConfig/operateConfig';
-import IntendManually from '../../pages/manage/oilPrice/intendManually';
-
+//支付方式配置
+import PayMethod from '../../pages/manage/payMethod/payMethod';
+//班次模板管理
 import ShiftList from '../../pages/manage/shiftTemplate/index';
+//智能设备管理
+import SmartDevice from '../../pages/manage/smartDevice/smartDevice';
+//油品价格管理
+import IntendManually from '../../pages/manage/oilPrice/intendManually';
+import OilBaseRecord from '../../pages/manage/oilPrice/oilBaseRecord';
+import OilPrice from '../../pages/manage/oilPrice/oilPrice';
+//优惠策略
+import PreferenPolicies from '../../pages/manage/preferenPolicies/preferenPolicies'
+//卸油管理
+import UnloadRecord from '../../pages/manage/unloadManage/unloadRecord';
+import UnloadHandle from '../../pages/manage/unloadManage/unloadHandle';
+//配置信息
+import ConfigInfo from '../../pages/manage/config/configInfo';
 
+
+//查询报表
 import OrderQuery from '../../pages/query/order/orderQuery';
+//油卡业务
 import CardManage from '../../pages/oilCard/cardManage/cardManage';
 
 
@@ -49,6 +65,7 @@ class content extends Component {
           <Route path="/manage/config/configInfo" exact component={ConfigInfo}></Route>
           <Route path="/manage/payMethod/payMethod" exact component={PayMethod}></Route>
           <Route path="/manage/operatorConfig/operateConfig" exact component={OperateConfig}></Route>
+          <Route path="/manage/unloadManage/unloadRecord" exact component={UnloadRecord}></Route>
           
           
           {
@@ -71,11 +88,18 @@ class content extends Component {
           <Route path="/system/basic/oilInfo" exact component={OilInfo}></Route>
           <Route path="/system/basic/tankConfig" exact component={TankConfig}></Route>
           <Route path="/system/basic/oilFillerConfig" exact component={OilFillerConfig}></Route>
-          <Route path="/system/config/configInfo" exact component={ConfigInfo}></Route>
+          <Route path="/system/operatorConfig/operateConfig" exact component={OperateConfig}></Route>
           <Route path="/system/payMethod/payMethod" exact component={PayMethod}></Route>
           <Route path="/system/shiftTemplate/shiftList" exact component={ShiftList}></Route>
-          <Route path="/system/operatorConfig/operateConfig" exact component={OperateConfig}></Route>
+          <Route path="/system/smartDevice/smartDevice" exact component={SmartDevice}></Route>
           <Route path="/system/oilPrice/intendManually" exact component={IntendManually}></Route>
+          <Route path="/system/oilPrice/oilBaseRecord" exact component={OilBaseRecord}></Route>
+          <Route path="/system/oilPrice/oilPrice" exact component={OilPrice}></Route>
+          <Route path="/system/preferenPolicies/preferenPolicies" exact component={PreferenPolicies}></Route>
+          <Route path="/system/unloadManage/unloadRecord" exact component={UnloadRecord}></Route>
+          <Route path="/system/unloadManage/unloadHandle" exact component={UnloadHandle}></Route>
+          <Route path="/system/config/configInfo" exact component={ConfigInfo}></Route>
+          
 
           <Route component={Home}></Route>
        

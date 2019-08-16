@@ -1,20 +1,24 @@
-.manageCon {
+.stationInfo {
   width: 100%;
   height: 96%;
   padding: 30px 0;
   background: #fff;
   overflow-y: auto;
 }
-.manageCon .subtitle {
+.stationInfo .subtitle {
   width: 96%;
   padding: 15px 0;
   margin: 0 auto;
 }
-.manageCon .subtitle .last {
+.stationInfo .subtitle .last {
   color: #555;
 }
-.manageCon .subtitle a {
+.stationInfo .subtitle a {
   font-size: 12px;
+}
+.stationInfo .btnGroup {
+  display: inherit;
+  justify-content: inherit;
 }
 .mainBox {
   width: 100%;
@@ -78,7 +82,6 @@
 }
 .orderQuery .ant-tag-checkable {
   background-color: transparent;
-  border-color: transparent;
   padding: 6px 20px;
   border: 1px solid #ccc;
 }
@@ -145,6 +148,30 @@
   background: #f7ad70;
   border-color: #f7ad70;
 }
+.preferenPolicies .selectBox {
+  width: 200px;
+}
+.unloadHandle .ant-form-item-control-wrapper {
+  width: 100%;
+}
+.unloadHandle .ant-form-item-control-wrapper .ant-form-item-control {
+  width: 80%;
+}
+.unloadHandle .ant-form-item-control-wrapper .ant-form-item-control .ant-form-item-children {
+  display: flex;
+  justify-content: flex-start;
+}
+.unloadHandle .ant-form-item-control-wrapper .ant-form-item-control .ant-form-item-children .unit {
+  padding-left: 10px;
+}
+.unloadHandle .unloadFormStart {
+  padding-bottom: 50px;
+  border-bottom: 1px solid #ccc;
+}
+.unloadHandle .unloadFormEnd {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
 .iconBtn {
   margin: 0 5px;
 }
@@ -181,6 +208,12 @@
   width: 38px;
   height: 20px;
   background: url('../../static/images/operate/print.png') no-repeat;
+}
+.iconBtnGroup .configPriceGroupIcon {
+  display: block;
+  width: 38px;
+  height: 20px;
+  background: url('../../static/images/operate/configPriceGroup.png') no-repeat;
 }
 .ant-btn-primary {
   border-radius: 20px;

@@ -13,7 +13,7 @@
       "type": "1",
       "large": "",
       "medium": "/images/menuLf/basicInfo.png",
-      "mediumBg": "http://192.168.0.8:8083/image/upload/image/menu/2016/07/21/p1ao6g3m821vu12m3o0k2eq17397.png",
+      "mediumBg": "/images/menuLf/basicInfo.png",
       "thumbnail": "",
       "isParent": true,
       "parentName": "",
@@ -58,7 +58,7 @@
       "type": "1",
       "large": "",
       "medium": "images/menuLf/FuelManConfig.png",
-      "mediumBg": "http://192.168.0.8:8083/image/upload/image/menu/2016/07/21/p1ao6g5k97ifp15uoahj139u6p67.png",
+      "mediumBg": "images/menuLf/FuelManConfig.png",
       "thumbnail": "",
       "isParent": true,
       "parentName": ""
@@ -76,7 +76,7 @@
       "type": "1",
       "large": "",
       "medium": "images/menuLf/payMethodConfig.png",
-      "mediumBg": "http://192.168.0.8:8083/image/upload/image/menu/2016/07/21/p1ao6g3m821vu12m3o0k2eq17397.png",
+      "mediumBg": "images/menuLf/payMethodConfig.png",
       "thumbnail": "",
       "isParent": true,
       "parentName": ""
@@ -94,7 +94,7 @@
       "type": "1",
       "large": "",
       "medium": "images/menuLf/shiftTempManage.png",
-      "mediumBg": "http://192.168.0.8:8083/image/upload/image/menu/2016/05/19/p1aj3qei269j76hmovv8210iu7.png",
+      "mediumBg": "images/menuLf/shiftTempManage.png",
       "thumbnail": "",
       "isParent": true,
       "parentName": "",
@@ -115,11 +115,11 @@
       "name": "智能设备管理",
       "parentId": "12029684246118400",
       "remark": "",
-      "url": "/admin/areaProxy/tree.jhtml",
+      "url": "/system/smartDevice/smartDevice",
       "type": "1",
       "large": "",
       "medium": "images/menuLf/intelliDevManage.png",
-      "mediumBg": "http://192.168.0.8:8083/image/upload/image/menu/2018/01/18/p1c43f405oko81mh21m9dvoos4e7.png",
+      "mediumBg": "images/menuLf/intelliDevManage.png",
       "thumbnail": "",
       "isParent": true,
       "parentName": ""
@@ -137,14 +137,14 @@
       "type": "1",
       "large": "",
       "medium": "images/menuLf/oilPriceManage.png",
-      "mediumBg": "http://192.168.0.8:8083/image/upload/image/menu/2018/01/18/p1c43f7abtjt5138b19i214im2dt7.png",
+      "mediumBg": "images/menuLf/oilPriceManage.png",
       "thumbnail": "",
       "isParent": true,
       "parentName": "",
       "children": [
         {
           "id": "3754414521",
-          "url": "/system/oilPrice/intendManually",
+          "url": "/system/oilPrice/oilBaseRecord",
           "name": "油品变价记录"
         },
         {
@@ -154,7 +154,7 @@
         },
         {
           "id": "3754414523",
-          "url": "/manage/oilPrice/intendManually",
+          "url": "/system/oilPrice/oilPrice",
           "name": "油品价格配置"
         }
       ]
@@ -168,11 +168,11 @@
       "name": "优惠策略管理",
       "parentId": "12029684246118400",
       "remark": "",
-      "url": "/admin/rechargeRule/list.jhtml",
+      "url": "/system/preferenPolicies/preferenPolicies",
       "type": "1",
       "large": "",
       "medium": "images/menuLf/preferStateManage.png",
-      "mediumBg": "http://192.168.0.8:8083/image/upload/image/menu/2018/01/18/p1c43f65smg0hai41e9m1ms93mh7.png",
+      "mediumBg": "images/menuLf/preferStateManage.png",
       "thumbnail": "",
       "isParent": true,
       "parentName": ""
@@ -190,10 +190,22 @@
       "type": "1",
       "large": "",
       "medium": "images/menuLf/unloadManage.png",
-      "mediumBg": "http://192.168.0.8:8083/image/upload/image/menu/2016/07/21/p1ao6gjcjnhf7d3u118ummq1kbk7.png",
+      "mediumBg": "images/menuLf/unloadManage.png",
       "thumbnail": "",
       "isParent": true,
-      "parentName": ""
+      "parentName": "",
+      "children": [
+        {
+          "id": "37544145211",
+          "url": "/system/unloadManage/unloadHandle",
+          "name": "卸油操作"
+        },
+        {
+          "id": "37544145222",
+          "url": "/system/unloadManage/unloadRecord",
+          "name": "卸油记录"
+        }
+      ]
     },
     {
       "id": "31539903175065600",
@@ -208,7 +220,7 @@
       "type": "1",
       "large": "",
       "medium": "images/menuLf/imageManage.png",
-      "mediumBg": "http://192.168.0.8:8083/image/upload/image/menu/2016/07/21/p1ao6gjshnbncp05ej51osu1l8q7.png",
+      "mediumBg": "images/menuLf/imageManage.png",
       "thumbnail": "",
       "isParent": true,
       "parentName": ""
@@ -226,7 +238,7 @@
       "type": "1",
       "large": "",
       "medium": "images/menuLf/configInfo.png",
-      "mediumBg": "http://192.168.0.8:8083/image/upload/image/menu/2018/01/15/p1c3rrporu1ihn1hvktc1jb42j47.png",
+      "mediumBg": "images/menuLf/configInfo.png",
       "thumbnail": "",
       "isParent": true,
       "parentName": ""

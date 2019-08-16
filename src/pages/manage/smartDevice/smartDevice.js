@@ -1,60 +1,49 @@
 import React,{Component} from 'react';
-import { Table, Form, Row, Col, Button } from 'antd';
+import { Table, Form } from 'antd';
 import reqwest from 'reqwest';
 import '../index.css';
 
   
 const columns = [
     {
-        title: '状态',
-        dataIndex: 'tankNo',
-    },
-    {
-        title: '手动变价名称',
+        title: '序号',
         dataIndex: 'key',
     },
     {
-        title: '变价申请单号',
-        dataIndex: 'num',
+        title: '终端编号',
+        dataIndex: 'oilSys',
     },
     {
-        title: '生效日期',
-        dataIndex: 'capacity',
-    },
-    
-    {
-        title: '失效日期',
-        dataIndex: 'height',
+        title: '终端类型',
+        dataIndex: 'oilNum',
     },
     {
-        title: '生效时间',
-        dataIndex: 'LPM',
-    },
-    {
-        title: '失效时间',
-        dataIndex: 'rongLiang',
-    },
-    {
-        title: '优先级',
+        title: '终端序列号',
         dataIndex: 'state',
     },
     {
-        title: '申请时间',
-        dataIndex: 'refreshtime',
+        title: '通讯IP地址',
+        dataIndex: 'kesy',
     },
     {
-        title: '操作',
-        dataIndex: 'operation',
-        render: (text, record) =>(
-            <div className="iconBtnGroup">
-                <a href="javascript:;" title='查看详情' className="iconBtn lookIcon"></a>
-                <a href="javascript:;" title='编辑' className="iconBtn editIcon"></a>
-            </div>
-        ),
+        title: '通讯端口号',
+        dataIndex: 'oileSys',
+    },
+    {
+        title: '终端状态',
+        dataIndex: 'oilNusm',
+    },
+    {
+        title: '绑定加油员',
+        dataIndex: 'statee',
+    },
+    {
+        title: '更新时间',
+        dataIndex: 'operati',
     },
   ];
 
-class IntendManually extends Component {
+class SmartDevice extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -109,16 +98,8 @@ class IntendManually extends Component {
 
     render() {
         return (
-        <div className="mainBox tankConfig">
+        <div className="mainBox oilApplication">
             <div className="mainCon">
-                <Row className="conditionGroup">
-                    <Col>
-                        <Button className="addBtn" type="primary">
-                            新建
-                            <span className="newIcon"></span>
-                        </Button>
-                    </Col>
-                </Row>
                 <Table
                 columns={columns}
                 rowKey={record => record.login.uuid}
@@ -136,4 +117,4 @@ class IntendManually extends Component {
 
   
 }
-export default  Form.create({ name: 'coordinated' })(IntendManually);
+export default  Form.create({ name: 'coordinated' })(SmartDevice);

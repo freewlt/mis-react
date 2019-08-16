@@ -1,54 +1,62 @@
 import React,{Component} from 'react';
-import { Table, Form, Row, Col, Input, Button, Select, DatePicker,Tag } from 'antd';
+import { Table, Form, Row, Col, Button, DatePicker } from 'antd';
 import reqwest from 'reqwest';
 import '../../index.css';
-
-const { Option } = Select;
   
-const { CheckableTag } = Tag;
-const tagsFromServer = ['全部', '现金', '银联卡', '微信', '电子卡', '加油卡', '支付宝'];
 
 const columns = [
     {
-        title: '交易时间',
+        title: '卸油时间',
         dataIndex: 'time',
     },
     {
-        title: '班次',
+        title: '油罐',
         dataIndex: 'shift',
     },
     {
-        title: '收银员',
+        title: '油品',
         dataIndex: 'cashier',
     },
     {
-        title: '油品金额',
+        title: '油站供应商',
         dataIndex: 'oilAmt',
     },
     
     {
-        title: '非油金额',
+        title: '车牌号',
         dataIndex: 'feiYouAmt',
     },
     {
-        title: '优惠总金额',
+        title: '送油司机',
         dataIndex: 'discoutnAmt',
     },
     {
-        title: '退货金额',
+        title: '来单数量（KG）',
         dataIndex: 'returnPrice',
     },
     {
-        title: '合计金额',
+        title: '来单升数（L）',
         dataIndex: 'sumPrice',
     },
     {
-        title: '支付方式',
+        title: '来单视温（℃）',
         dataIndex: 'payMethod',
     },
     {
-        title: '支付状态',
+        title: '来单视密（kg/cm³）',
         dataIndex: 'state',
+    },
+    {
+        title: '罐內油温（卸油前）',
+        dataIndex: 'before',
+    },
+    {
+        title: '罐內油温（卸油后）',
+        dataIndex: 'wendu',
+    },
+    {
+        title: '实收油升数（L）',
+        dataIndex: 'l',
     },
     {
         title: '操作',
@@ -62,7 +70,7 @@ const columns = [
     },
   ];
 
-class OrderQuery extends Component {
+class unloadRecord extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -72,7 +80,6 @@ class OrderQuery extends Component {
             startValue: null,
             endValue: null,
             endOpen: false,
-            selectedTags: [],
         };
     }
     
@@ -117,19 +124,6 @@ class OrderQuery extends Component {
         this.setState({ endOpen: open });
       };
     
-      handleChange(tag, checked) {
-        const { selectedTags } = this.state;
-        console.log(tag)
-        if(tag==='全部'){
-            const nextSelectedTags = checked ? [...selectedTags, tag] : selectedTags.filter(t => t !== tag);
-           this.setState({ selectedTags: nextSelectedTags });
-        }else{
-            const nextSelectedTags = checked ? [...selectedTags, tag] : selectedTags.filter(t => t !== tag);
-            this.setState({ selectedTags: nextSelectedTags });
-        }
-      }
-     
-      
     componentDidMount() {
        this.fetch();
     }
@@ -161,8 +155,6 @@ class OrderQuery extends Component {
             type: 'json',
         }).then(data => {
             const pagination = { ...this.state.pagination };
-            // Read total count from server
-            // pagination.total = data.totalCount;
             pagination.total = 200;
             this.setState({
                 loading: false,
@@ -174,14 +166,14 @@ class OrderQuery extends Component {
 
 
     render() {
-        const { startValue, endValue, endOpen,selectedTags } = this.state;
+        const { startValue, endValue, endOpen } = this.state;
 
         return (
         <div className="mainBox orderQuery">
             <div className="mainCon">
             <Form className="oilFillerForm">
                     <Row>
-                        <Col span={24}>
+                        <Col>
                             <Form.Item label="订单时间" className="timeBox">
                                 <DatePicker
                                 disabledDate={this.disabledStartDate}
@@ -203,62 +195,13 @@ class OrderQuery extends Component {
                                     onOpenChange={this.handleEndOpenChange}
                                 />
                             </Form.Item>
-                            <Form.Item label="订 单 号">
-                                <Input className="orderNumInput" placeholder="1"/>
-                            </Form.Item>
-                            <Form.Item label="油 枪 号 ">
-                                <Select className="selectBox gunSelect" placeholder="全部">
-                                <Option value="male">全部</Option>
-                                <Option value="female">2</Option>
-                                </Select>
-                            </Form.Item>
                             </Col>
-                    </Row>
-                    <Row>
-                    
-                    <Col span={24}>
-                            <Form.Item label="油 品 号">
-                                <Select className="selectBox oilSelect" placeholder="全部">
-                                    <Option value="male">全部</Option>
-                                    <Option value="female">2</Option>
-                                </Select>
-                            </Form.Item>
-                            <Form.Item label="收 银 员">
-                                <Select className="selectBox cashierSelect" placeholder="全部">
-                                    <Option value="male">全部</Option>
-                                    <Option value="female">2</Option>
-                                </Select>
-                            </Form.Item>
-                            <Form.Item label="班 次 号">
-                                <Input className="shiftNum" placeholder="1"/>
-                            </Form.Item>
-                            </Col>
-                    </Row>
-                    <Row>
-                    
-                    <Col span={24}>
-                            <Form.Item label="支付方式">
-                                {tagsFromServer.map(tag => (
-                                    <CheckableTag
-                                    key={tag}
-                                    checked={selectedTags.indexOf(tag) > -1}
-                                    onChange={checked => this.handleChange(tag, checked)}
-                                    >
-                                    {tag}
-                                    </CheckableTag>
-                                ))}
-                            </Form.Item>
-                            <Form.Item className="handleBtn">
-                                <Button  className="resetBtn" type="primary">
-                                    重置
-                                    <span className="resetIcon"></span> 
-                                </Button>
-                                <Button  type="primary">
-                                    查询
-                                    <span className="searchIcon"></span> 
-                                </Button>
-                            </Form.Item>
-                            </Col>
+                            <Col>
+                              <Button className="searchBtn" type="primary" htmlType="submit">
+                                搜索
+                                <span className="searchIcon"></span>
+                              </Button>
+                          </Col>
                     </Row>
                 </Form>
 
@@ -279,4 +222,4 @@ class OrderQuery extends Component {
 
   
 }
-export default  Form.create({ name: 'coordinated' })(OrderQuery);
+export default  Form.create({ name: 'coor' })(unloadRecord);

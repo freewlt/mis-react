@@ -8,7 +8,7 @@ body{
   height:90px;
   background: #1863fd;
   .logoBox{
-    width:20%;
+    width:14%;
     height: 100%;
     .logo{
       margin: 24px 20px;
@@ -18,11 +18,12 @@ body{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 40%;
+    width: 60%;
     height: 100%;
     text-align: center;
     .menuNav{
       padding: 18px 20px;
+      margin: 0 20px;
       text-decoration: none;
       .pic{
         display: block;
@@ -40,7 +41,7 @@ body{
   }
   .handleBox{
     position: relative;
-    width:40%;
+    width:26%;
     height: 100%;
     text-align: center;
     .handleDetail{
@@ -78,10 +79,51 @@ body{
         background: #2118dd;
       }
     }
-    .handleBtn{
+    .handleBtnBox{
+      display: flex;
+      justify-content: flex-end;
+      padding-right:80px;
       margin-top: 42px;
-      border-color: #fff;
-      background:#1863fd;
+      .handleBtn{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-right:30px;
+        border-color: #fff;
+        background:#1863fd;
+        .duty{
+          width:16px;
+          height:16px;
+          margin-left:10px;
+          background: url('../../static/images/header/duty.png') no-repeat;
+        }
+      }
+      .selectLanguage{
+        min-width:100px;
+        .ant-select-selection{
+          color: #fff;
+          background: none;
+          border-radius: 20px;
+          &:hover{
+            border-color: #fff;
+            box-shadow: #fff;
+          }
+          &:active{
+            border-color: #fff;
+            box-shadow: #fff;
+          }
+          &:focus{
+            border-color: #fff;
+            box-shadow: #fff;
+          }
+        }
+        .ant-select-arrow{
+          color: #fff;
+        }
+        .ant-select-selection__placeholder, .ant-select-search__field__placeholder{
+          color: #fff;
+        }
+      }
     }
   }
 }
