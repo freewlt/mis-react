@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { Button, Select } from 'antd';
 import { chooseMenu, chooseLfMenu, chooseLfSubMenu } from '../../store/actionCreators';
+import intl from 'react-intl-universal';
 
 import './index.css';
 import Logo from './../../static/images/header/logo.png';
@@ -43,6 +44,16 @@ class Header extends Component {
             current: e.id,
         });
     };
+
+    changeLanguage(lang) {
+        if(lang=='CHINA'){
+            console.log(3)
+            this.setState({currentLocale: 'zh-CN'});
+        }
+        if(lang=='English'){
+            this.setState({currentLocale: 'en_US'});
+        }
+    }
 
     render(){
         
@@ -85,12 +96,14 @@ class Header extends Component {
                         </div>
                      </div>
                     <div className="handleBtnBox">
-                        <Button className="handleBtn" type="primary" shape="round" >
+                        <Button className="handleBtn" type="primary" shape="round">
                             上班
+                            {intl.get('duty')}
                             <span className="duty"></span>
                         </Button>
-                        <Select className="selectLanguage" placeholder="CH">
-                            <Option value="CHINA">CHINA</Option>
+                        <Select className="selectLanguage" placeholder="中文"
+                                onChange={this.changeLanguage.bind(this)}>
+                            <Option value="CHINA">中文</Option>
                             <Option value="English">English</Option>
                         </Select>
                     </div>
