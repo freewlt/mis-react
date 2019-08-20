@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  height: calc(90%);
+  height: calc(93%);
 }
 .home {
   width: 100%;
@@ -12,4 +12,19 @@
 }
 .home h3 {
   padding-top: 20%;
+}
+.cashierMain {
+  float: left;
+  width: 100%;
+  height: calc(93%);
+  box-sizing: border-box;
+  background: url(../../src//static//images//cashierBus//bg.png) no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+.cashierMain .cashierCon {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 1%;
 }

@@ -30,32 +30,30 @@ class App extends React.Component {
         intl.init({
             currentLocale: 'zh-CN',
             locales,
-        })
-            .then(() => {
+        }).then(() => {
                 this.setState({initDone: true});
             });
     }
 
     render() {
         return (
-          <IntlProvider>
             <Provider store={store}>
-              <BrowserRouter>
-                <Header/>
-                <Switch>
-                  <Route path="/manage" component={Manage}></Route>
-                  <Route path="/cashier" component={Cashier}></Route>
-                  <Route path="/oilCard" component={OilCard}></Route>
-                  <Route path="/query" component={Query}></Route>
-                  <Route path="/system" component={System}></Route>
-                  <Route component={Home}></Route>
-                </Switch>
-              </BrowserRouter>
+                <IntlProvider locale=''>
+                  <BrowserRouter>
+                    <Header/>
+                    <Switch>
+                      <Route path="/manage" component={Manage}></Route>
+                      <Route path="/cashier" component={Cashier}></Route>
+                      <Route path="/oilCard" component={OilCard}></Route>
+                      <Route path="/query" component={Query}></Route>
+                      <Route path="/system" component={System}></Route>
+                      <Route component={Home}></Route>
+                    </Switch>
+                  </BrowserRouter>
+                </IntlProvider>
           </Provider>
-         </IntlProvider>
         );
     }
 }
 
-
-export default App;
+export default  App

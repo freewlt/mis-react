@@ -63,7 +63,7 @@ class TankConfig extends Component {
             loading: false,
         };
     }
-    
+
     componentDidMount() {
         this.fetch();
     }

@@ -8,6 +8,7 @@ const initialState={
     subTitle:'156',
     current: 1,
     visible:false,
+    currentLocale: 'zh-CN',
 };
 
 

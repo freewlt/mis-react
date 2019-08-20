@@ -1,6 +1,7 @@
 import React from 'react';
-import MenuLf from '../components/menuLf';
-import Content from '../components/content';
+import Lt from '../components/cashierBus/left';
+import Ct from '../components/cashierBus/center';
+import Rt from '../components/cashierBus/right';
 import './index.css'
 import axios from 'axios';
 
@@ -8,15 +9,17 @@ class Cashier extends React.Component {
     constructor(props){
       super(props);
       this.state={
-				menuList:[],
 			}
     }
    
     render() {
         return (
-            <div className="containerRt">
-								<MenuLf menuList={this.state.menuList}/>
-								<Content/>
+			<div className="cashierMain">
+				<div className="cashierCon">
+					<Lt/>
+					<Ct/>
+					<Rt/>
+				</div>
             </div>
         );
 		}

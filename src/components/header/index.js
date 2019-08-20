@@ -46,14 +46,19 @@ class Header extends Component {
     };
 
     changeLanguage(lang) {
-        if(lang=='CHINA'){
-            console.log(3)
+        if(lang==='china'){
             this.setState({currentLocale: 'zh-CN'});
-        }
-        if(lang=='English'){
+        }else if(lang==='English'){
+            this.setState({currentLocale: 'zh-CN'});
+        }else {
             this.setState({currentLocale: 'en_US'});
         }
+    };
+
+    componentDidMount(){
+        this.changeLanguage()
     }
+
 
     render(){
         
@@ -103,7 +108,7 @@ class Header extends Component {
                         </Button>
                         <Select className="selectLanguage" placeholder="中文"
                                 onChange={this.changeLanguage.bind(this)}>
-                            <Option value="CHINA">中文</Option>
+                            <Option value="china">中文</Option>
                             <Option value="English">English</Option>
                         </Select>
                     </div>
@@ -113,7 +118,6 @@ class Header extends Component {
     }
 
 }
-//export default Header;
 
 const mapStateToProps = (state)=>{
     return {
