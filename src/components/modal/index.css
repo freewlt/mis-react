@@ -33,3 +33,8 @@
 .ModalBox .ant-modal-content .ant-modal-footer .ant-btn {
   border-radius: 20px;
 }
+.ModalBox .ant-transfer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

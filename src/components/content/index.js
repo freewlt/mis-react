@@ -27,28 +27,35 @@ import UnloadHandle from '../../pages/manage/unloadManage/unloadHandle';
 //配置信息
 import ConfigInfo from '../../pages/manage/config/configInfo';
 
-
 //查询报表
 import OrderQuery from '../../pages/query/order/orderQuery';
+import ReportClass from '../../pages/query/reportManage/reportClass';
+import PhyCardRecharge from '../../pages/query/reportManage/phyCardRecharge';
+import PhyCardConsume from '../../pages/query/reportManage/phyCardConsume';
 //油卡业务
-import CardManage from '../../pages/oilCard/cardManage/cardManage';
-
-
+import OpenCard from '../../pages/oilCard/cardManage/openCard';
+import Recharge from '../../pages/oilCard/cardManage/recharge';
+import ModifyCard from '../../pages/oilCard/cardManage/modifyCard';
+import OilUnitSet from '../../pages/oilCard/cardManage/oilUnitSet';
+import CardOperate from '../../pages/oilCard/cardManage/cardOperate';
+import PlungAccount from '../../pages/oilCard/cardManage/plungAccount';
+import TransferAccount from '../../pages/oilCard/cardManage/transferAccount';
+import TradeQuery from '../../pages/oilCard/inquirStatistic/tradeQuery';
+import CardDetail from '../../pages/oilCard/inquirStatistic/cardDetail';
+import CardEnquiry from '../../pages/oilCard/inquirStatistic/cardEnquiry';
+import InvoiceManage from '../../pages/oilCard/inquirStatistic/invoiceManage';
+import WhiteList from '../../pages/oilCard/inquirStatistic/whiteList';
+import BlackList from '../../pages/oilCard/inquirStatistic/balckList';
+import InventoryManage from '../../pages/oilCard/blankCardManage/inventoryManage';
+import InOutLog from '../../pages/oilCard/blankCardManage/inOutLog';
 
 import Home from '../../pages/home.js';
-
 
 import Casheng from '../../pages/cashier/casheng';
 import './index.css';
 
 
-class content extends Component {
-  constructor(props){
-    super(props);
-    this.state = {
-    };
-  }
-  
+class Content extends Component {
   render() {
 
     return (
@@ -72,13 +79,30 @@ class content extends Component {
             //查询报表
           }
           <Route path="/query/order/orderQuery" exact component={OrderQuery}></Route>
+          <Route path="/query/reportManage/reportClass" exact component={ReportClass}></Route>
+          <Route path="/query/reportManage/phyCardRecharge" exact component={PhyCardRecharge}></Route>
+          <Route path="/query/reportManage/phyCardConsume" exact component={PhyCardConsume}></Route>
 
           <Route path="/cashier/casheng" exact component={Casheng}></Route>
 
           {
             //油卡业务
           }
-          <Route path="/oilCard/cardManage/cardManage" exact component={CardManage}></Route>
+          <Route path="/oilCard/cardManage/openCard" exact component={OpenCard}></Route>
+          <Route path="/oilCard/cardManage/recharge" exact component={Recharge}></Route>
+          <Route path="/oilCard/cardManage/modifyCard" exact component={ModifyCard}></Route>
+          <Route path="/oilCard/cardManage/oilUnitSet" exact component={OilUnitSet}></Route>
+          <Route path="/oilCard/cardManage/cardOperate" exact component={CardOperate}></Route>
+          <Route path="/oilCard/cardManage/plungAccount" exact component={PlungAccount}></Route>
+          <Route path="/oilCard/cardManage/transferAccount" exact component={TransferAccount}></Route>
+          <Route path="/oilCard/inquirStatistic/tradeQuery" exact component={TradeQuery}></Route>
+          <Route path="/oilCard/inquirStatistic/cardDetail" exact component={CardDetail}></Route>
+          <Route path="/oilCard/inquirStatistic/cardEnquiry" exact component={CardEnquiry}></Route>
+          <Route path="/oilCard/inquirStatistic/invoiceManage" exact component={InvoiceManage}></Route>
+          <Route path="/oilCard/inquirStatistic/whiteList" exact component={WhiteList}></Route>
+          <Route path="/oilCard/inquirStatistic/balckList" exact component={BlackList}></Route>
+          <Route path="/oilCard/blankCardManage/inventoryManage" exact component={InventoryManage}></Route>
+          <Route path="/oilCard/blankCardManage/inOutLog" exact component={InOutLog}></Route>
           
           {
             //系统设置
@@ -108,7 +132,7 @@ class content extends Component {
   }
 }
 
-export default content
+export default Content
 
 // const mapStateToProps =(state) => {
 //   return {

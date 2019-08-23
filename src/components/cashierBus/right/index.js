@@ -1,5 +1,6 @@
 import React from 'react';
 import { Table, Input , Button, Popconfirm } from 'antd';
+import classname from 'classname';
 import '../index.css';
 
 const payMethodList = [
@@ -28,35 +29,37 @@ class Right extends React.Component {
             {
                 title: '商品名称',
                 dataIndex: 'name',
-                render: (text, record) =>(
-                    <div className="goodName">
-                        <div className="discount">2件9折</div>
-                        {
-                             //<div className="discountGreen">2件9折</div>
-                            // <div className="discountOrange">2件9折</div>
-                        }
-                        哇哈哈矿泉水
-                    </div>
-                ),
+                width:'20%',
+                render: (text, record) =>{
+                    return (
+                        <div className="goodName">
+                            <div className= {classname({'discount': record.type===1, 'discountGreen': record.type===2, 'discountOrange': record.type===3})}>{record.discount}</div>
+                            {record.name}
+                        </div>
+                    )
+                },
             },
             {
                 title: '单价',
                 dataIndex: 'unitPrice',
+                width:'20%',
             },
             {
                 title: '数量',
                 dataIndex: 'gendeer',
+                width:'20%',
                 render: (text, record) =>(
                     <div className="goodNum">
-                        <span className="btn minus" onClick={()=> this.decrease(record.key)}>-</span>
-                        <span className="num">{this.state.num}</span>
-                        <span className="btn plus" onClick={()=> this.increase(record.key)}>+</span>
+                        <span className="btn minus" onClick={()=> record.num--}>-</span>
+                        <span className="num">{record.num}</span>
+                        <span className="btn plus" onClick={()=> this.increase(record.num)}>+</span>
                     </div>
                 ),
             },
             {
                 title: '小计',
                 dataIndex: 'gendesr',
+                width:'20%',
             },
             {
                 title: '操作',
@@ -79,21 +82,30 @@ class Right extends React.Component {
                 amount: 120,
                 unitPrice: '12',
                 note: 'transfer',
+                discount:'2件9折',
+                type:1,
+                num:10
               },
-            //   {
-            //     key: 1,
-            //     name: '哇哈哈矿泉水-03-11',
-            //     unitPrice: 243,
-            //     amount: 21,
-            //     note: 'transfer',
-            //   },
-            //   {
-            //     key: 2,
-            //     name: '哇哈哈矿泉水11',
-            //     unitPrice: 98,
-            //     amount: 21,
-            //     note: 'transfer',
-            //   },
+              {
+                key: 1,
+                name: '哇哈哈矿泉水-03-11',
+                unitPrice: 243,
+                amount: 21,
+                note: 'transfer',
+                discount:'3件8折',
+                type:2,
+                num:12
+              },
+              {
+                key: 2,
+                name: '哇哈哈矿泉水11',
+                unitPrice: 98,
+                amount: 21,
+                note: 'transfer',
+                discount:'2件9折',
+                type:3,
+                num:12
+              },
         ]
     }
 
@@ -102,15 +114,15 @@ class Right extends React.Component {
         this.setState({ dataSource: dataSource.filter(item => item.key !== key) });
     };
     
-    increase= key =>{
+    increase= num =>{
         this.setState({
-            num: this.state.num +1
+            num: num ++
         });
     }
-     decrease= key =>{
+     decrease= num =>{
          if(this.state.num > 1){
             this.setState({
-                num: this.state.num-1
+                num: num--
             });
          }
     }
@@ -137,15 +149,17 @@ class Right extends React.Component {
 
         return (
            <div className="rightCon">
-                <ul className="tableSymbol">
-                    <li><span className="hot"></span>-10#</li>
-                    <li>5.00</li>
-                    <li>60L</li>
-                    <li>300.00</li>
-                    <li><span className="vip"></span></li>
-                </ul>
-                <Table className="listGood" components={this.components} 
-                columns={columns} dataSource={this.state.dataSource} />
+            <div className="tableBox">
+                    <ul className="tableSymbol">
+                        <li><span className="hot"></span>-10#</li>
+                        <li>5.00</li>
+                        <li>60L</li>
+                        <li>300.00</li>
+                        <li><span className="vip"></span></li>
+                    </ul>
+                    <Table className="listGood" components={this.components} 
+                    columns={columns} dataSource={this.state.dataSource} />
+                </div>
                 <div className="mnemoniCodeBox">
                     <Input className="mnemoniCodeInput" placeholder="请扫码商品条码"/>
                     <Button className="mnemoniCodeBtn" type="primary">

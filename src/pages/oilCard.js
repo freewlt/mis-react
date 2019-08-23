@@ -8,8 +8,8 @@ class Oilcard extends React.Component {
     constructor(props){
       super(props);
       this.state={
-				menuList:[],
-			}
+			menuList:[],
+		}
     }
    
     render() {

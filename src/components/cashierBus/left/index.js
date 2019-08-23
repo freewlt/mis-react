@@ -47,24 +47,29 @@ class Left extends React.Component {
         super(props);
         this.columns = [
             {
-                title: '商品名称',
+                title: '时间',
                 dataIndex: 'name',
                 width: '20%',
             },
             {
-                title: '单价',
+                title: '油枪',
                 dataIndex: 'geneder',
             },
             {
-                title: '数量',
+                title: '油品',
                 dataIndex: 'gendeer',
                 render:(text,record)=>(
                     <div className="txt"></div>
                 )
             },
             {
-                title: '小计',
+                title: '升数',
                 dataIndex: 'gendesr',
+                width: '20%',
+            },
+            {
+                title: '金额',
+                dataIndex: 'age',
                 width: '20%',
             },
             {
@@ -74,7 +79,7 @@ class Left extends React.Component {
                     this.state.data.length >= 1 ? (
                         <Popconfirm title="Sure to delete?" onConfirm={() => this.handleDelete(record.key)}>
                             <div className="iconBtnGroup">
-                                <a href="javascript:;" title='编辑' className="iconBtn deleteBlackIcon"></a>
+                                <a href="javascript:;" title='编辑' className="iconBtn editBlackIcon"></a>
                             </div>
                         </Popconfirm>
                       ) : null,

@@ -22,15 +22,15 @@ const columns = [
     },
     {
         title: '活动起始日期',
-        dataIndex: 'state',
+        dataIndex: 'st3ate',
     },
     {
         title: '活动结束日期',
-        dataIndex: 'state',
+        dataIndex: 'stwate',
     },
     {
         title: '生效时间',
-        dataIndex: 'state',
+        dataIndex: 'staete',
     },
     {
         title: '操作',
@@ -153,7 +153,7 @@ class PreferenPolicies extends Component {
                     Content of tab 2
                     </TabPane>
                     <TabPane tab="实体卡活动查询" key="3">
-                      <Form className="ant-advanced-search-form">
+                      <Form className="ant-advanced-search-form" labelCol={{ span: 10 }}>
                         <Row>
                           <Col span={5}>
                             <Form.Item label="活动类型">
@@ -189,7 +189,7 @@ class PreferenPolicies extends Component {
                               </Form.Item>
                             </Col>
                             <Col>
-                              <Button className="searchBtn" type="primary" htmlType="submit">
+                              <Button className="searchBtn" type="primary" >
                                 搜索
                                 <span className="searchIcon"></span>
                               </Button>

@@ -3,20 +3,31 @@
 .centerCon {
   display: inline-block;
   vertical-align: top;
-  height: 100%;
+  height: 88%;
+}
+.leftCon .ant-table-pagination,
+.rightCon .ant-table-pagination,
+.centerCon .ant-table-pagination {
+  display: none;
 }
 .leftCon {
   position: absolute;
   left: 0;
   top: 0;
   width: 486px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 .leftCon .listGood {
   width: 100%;
-  height: 44.2%;
+  height: 42%;
   background: #fff;
   border-radius: 10px;
-  margin-bottom: 2%;
+}
+.leftCon .listGood th {
+  font-weight: bold;
+  background: #e1e9f6;
 }
 .leftCon .listGood td:nth-child(2) .txt {
   display: block;
@@ -37,12 +48,12 @@
   align-content: flex-start;
   flex-wrap: wrap;
   width: 100%;
-  height: 46.4%;
+  height: 57%;
   background: #fff;
   border-radius: 10px;
 }
 .leftCon .oilGun .gunNum {
-  width: 16.67%;
+  width: 16.6%;
   height: 16.7%;
   padding: 10px 0 0 10px;
   border-radius: 0;
@@ -78,6 +89,9 @@
 }
 .centerCon {
   position: absolute;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   left: 503px;
   top: 0;
   width: 150px;
@@ -85,19 +99,18 @@
 .centerCon .btn {
   display: block;
   width: 100%;
-  height: calc(7.6%);
-  margin-bottom: 6px;
+  height: 8%;
   border-radius: 10px;
   background: linear-gradient(angle, #f3f3f3, #ededed);
   border-color: #e9e9e9;
   box-shadow: 2px 2px 2px #777;
 }
-.centerCon .btn:nth-child(7) {
+.centerCon .btn:nth-child(3) {
   color: #fff;
   background: #49cde4;
   border: none;
 }
-.centerCon .btn:nth-child(8) {
+.centerCon .btn:nth-child(4) {
   color: #fff;
   background: #f57208;
   border: none;
@@ -106,20 +119,26 @@
   margin-bottom: 0;
 }
 .rightCon {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   width: 98%;
   padding-left: 670px;
 }
-.rightCon .tableSymbol {
+.rightCon .tableBox {
+  height: 60%;
+}
+.rightCon .tableBox .tableSymbol {
   display: flex;
   justify-content: space-around;
   align-content: center;
   align-items: center;
-  height: 4%;
+  height: 7%;
   padding: 0;
   font-size: 0;
   background: #313541;
 }
-.rightCon .tableSymbol li {
+.rightCon .tableBox .tableSymbol li {
   position: relative;
   display: flex;
   justify-content: center;
@@ -130,62 +149,65 @@
   font-weight: bold;
   color: #fff;
 }
-.rightCon .tableSymbol .hot {
+.rightCon .tableBox .tableSymbol .hot {
   position: absolute;
   left: 20%;
   top: 19%;
   width: 24px;
   height: 24px;
-  background: url(../../static/images/header/cashier.png) no-repeat;
+  background: url(../../static/images/operate/hot.png) no-repeat;
 }
-.rightCon .tableSymbol .vip {
+.rightCon .tableBox .tableSymbol .vip {
   display: block;
   width: 24px;
   height: 24px;
   background: url(../../static/images/operate/VIP.png) no-repeat;
 }
-.rightCon .listGood {
+.rightCon .tableBox .listGood {
   width: 100%;
-  height: 50%;
+  height: 93%;
   background: #fff;
   border-radius: 10px;
 }
-.rightCon .listGood table td {
+.rightCon .tableBox .listGood table th {
+  font-weight: bold;
+}
+.rightCon .tableBox .listGood table td {
   position: relative;
 }
-.rightCon .listGood table td .discount {
+.rightCon .tableBox .listGood table td .discount {
   max-width: 70px;
   margin: 0 auto;
   background: red;
-  border-radius: 40%;
+  border-radius: 5%;
   text-align: center;
   font-size: 12px;
   color: #fff;
 }
-.rightCon .listGood table td .discountGreen {
+.rightCon .tableBox .listGood table td .discountGreen {
   max-width: 70px;
   margin: 0 auto;
   background: green;
-  border-radius: 40%;
+  border-radius: 5%;
   text-align: center;
   font-size: 12px;
   color: #fff;
 }
-.rightCon .listGood table td .discountOrange {
+.rightCon .tableBox .listGood table td .discountOrange {
   max-width: 70px;
   margin: 0 auto;
   background: orange;
-  border-radius: 40%;
+  border-radius: 5%;
   text-align: center;
   font-size: 12px;
   color: #fff;
 }
-.rightCon .listGood table td .goodNum {
+.rightCon .tableBox .listGood table td .goodNum {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.rightCon .listGood table td .goodNum .btn {
+.rightCon .tableBox .listGood table td .goodNum .btn {
   width: 30px;
   height: 30px;
   line-height: 28px;
@@ -193,16 +215,16 @@
   border-radius: 50%;
   cursor: pointer;
 }
-.rightCon .listGood table td .goodNum .num {
+.rightCon .tableBox .listGood table td .goodNum .num {
   padding: 0 10px;
   color: #ff0000;
+  font-weight: bold;
 }
 .rightCon .mnemoniCodeBox {
   display: flex;
   justify-content: flex-start;
   width: 100%;
   height: 8%;
-  margin: 1% 0;
 }
 .rightCon .mnemoniCodeBox .mnemoniCodeInput {
   width: 100%;
@@ -221,17 +243,21 @@
   justify-content: flex-start;
   align-items: center;
   width: 100%;
-  height: 27.4%;
+  height: 30%;
   background: #fff;
   border-radius: 10px;
 }
 .rightCon .payDetail .payList {
   width: 100%;
-  padding-right: 620px;
+  padding-right: 420px;
 }
 .rightCon .payDetail .payList .payBill {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   width: 100%;
-  padding: 3% 3% 0;
+  margin-bottom: 0;
+  padding: 0 3%;
 }
 .rightCon .payDetail .payList .payBill .bill {
   display: flex;
@@ -247,6 +273,7 @@
 .rightCon .payDetail .payList .payBill .bill:last-child span {
   font-size: 20px;
   font-weight: bold;
+  color: #333;
 }
 .rightCon .payDetail .payList .payBill .bill:last-child span:last-child {
   color: #ff0000;
@@ -257,16 +284,18 @@
   top: 0;
   display: flex;
   justify-content: flex-start;
-  align-content: flex-start;
+  align-content: center;
   flex-wrap: wrap;
-  width: 600px;
+  width: 400px;
   height: 100%;
-  padding: 2%;
   border-left: 1px dashed #ccc;
 }
 .rightCon .payDetail .payMethod .btn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   width: 30%;
-  height: 27%;
+  height: 24%;
   background: #f3f3f3;
   border: 1px solid #d7d7d7;
   margin: 1% 0 1% 3%;
@@ -276,16 +305,10 @@
   vertical-align: middle;
 }
 .rightCon .payDetail .payMethod .btn span:first-child {
-  background-size: 70% 70%;
-}
-.rightCon .payDetail .payMethod .btn span:last-child {
-  width: 60px!important;
+  background-size: 60% 60%;
 }
 .rightCon .payDetail .payMethod .btn .eleCardIcon {
   margin-left: 0;
-}
-.ant-table-pagination {
-  display: none;
 }
 .ant-table-thead > tr > th,
 .ant-table-tbody > tr > td {

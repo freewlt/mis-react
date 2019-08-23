@@ -9,7 +9,7 @@ class AdvancedSearchForm extends Component {
       <Form className="ant-advanced-search-form" onSubmit={this.handleSearch}>
         <Row>
           <Col>
-            <Form.Item>
+            <Form.Item label="班次号">
               <Input className="searchInput"
                 placeholder="班次号"
               />

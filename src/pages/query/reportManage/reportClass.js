@@ -1,9 +1,8 @@
 import React,{Component} from 'react';
-import { 
-    Tabs, Table,
-    Form,} from 'antd';
+import { Tabs, Table } from 'antd';
+import SearchCriteria from '../../../components/searchCriteria'
 import reqwest from 'reqwest';
-import '../index.css';
+import '../../index.css';
 
 const { TabPane } = Tabs;
 const columns = [
@@ -21,23 +20,23 @@ const columns = [
     },
     {
         title: '生效日期',
-        dataIndex: 'staete',
+        dataIndex: 'swtate',
     },
     {
         title: '失效日期',
-        dataIndex: 'statfe',
+        dataIndex: 'stfate',
     },
     {
         title: '生效时间',
-        dataIndex: 'steate',
+        dataIndex: 'stawte',
     },
     {
         title: '失效时间',
-        dataIndex: 'stsate',
+        dataIndex: 'staete',
     },
     {
         title: '优先级',
-        dataIndex: 'steatre',
+        dataIndex: 'statse',
     },
     {
         title: '操作',
@@ -51,7 +50,7 @@ const columns = [
     },
 ];
 
-class OilPrice extends Component {
+class ReportClass extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -92,8 +91,6 @@ class OilPrice extends Component {
             type: 'json',
         }).then(data => {
             const pagination = { ...this.state.pagination };
-            // Read total count from server
-            // pagination.total = data.totalCount;
             pagination.total = 200;
             this.setState({
                 loading: false,
@@ -106,10 +103,11 @@ class OilPrice extends Component {
 
     render() {
         return (
-        <div className="mainBox cardManage">
+        <div className="mainBox reportClass">
             <div className="mainCon">
                 <Tabs>
-                    <TabPane tab="油品价格配置" key="1">
+                    <TabPane tab="班结" key="1">
+                        <SearchCriteria/>
                         <Table
                             columns={columns}
                             rowKey={record => record.login.uuid}
@@ -119,9 +117,6 @@ class OilPrice extends Component {
                             onChange={this.handleTableChange}
                         />
                     </TabPane>
-                    <TabPane tab="配置价格组" key="2">
-                    Content of tab 2
-                    </TabPane>
                 </Tabs>
             </div>
         </div>
@@ -130,4 +125,4 @@ class OilPrice extends Component {
 
   
 }
-export default  Form.create({ name: 'coordinated' })(OilPrice);
+export default ReportClass;
