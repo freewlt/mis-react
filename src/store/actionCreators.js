@@ -17,6 +17,10 @@ export const isShow = (visible)=>({
     type:constants.IS_SHOW,
     visible
 })
+export const chooseLanguage = (currentLocale)=>({
+  type:constants.CHOOSE_LANGUAGE,
+  currentLocale
+})
 
 // export const getList = () => {
 //   return (dispatch) => {

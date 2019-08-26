@@ -1,8 +1,7 @@
 import React from 'react';
 import  Header from './components/header';
+import { connect } from 'react-redux';
 import {BrowserRouter,Route, Switch} from 'react-router-dom';
-import {Provider} from 'react-redux';
-import store from './store';
 
 import Home from '../src/pages/home';
 import Manage from '../src/pages/manage';
@@ -13,6 +12,7 @@ import System from '../src/pages/system';
 
 import {IntlProvider} from 'react-intl';
 import intl from 'react-intl-universal';
+
 require('intl/locale-data/jsonp/en.js');
 require('intl/locale-data/jsonp/zh.js');
 const locales = {
@@ -21,39 +21,52 @@ const locales = {
 };
 
 class App extends React.Component {
-    state = {initDone: false}
-    componentDidMount() {
+    constructor(props) {
+        super(props);
+    };
+
+    componentDidMount () {
         this.loadLocales();
     }
 
     loadLocales() {
+        console.log(this.props.currentLocale)
         intl.init({
-            currentLocale: 'zh-CN',
+            currentLocale:this.props.currentLocale,
             locales,
-        }).then(() => {
-                this.setState({initDone: true});
-            });
+        })
     }
 
     render() {
+        
         return (
-            <Provider store={store}>
-                <IntlProvider locale=''>
-                  <BrowserRouter>
-                    <Header/>
-                    <Switch>
-                      <Route path="/manage" component={Manage}></Route>
-                      <Route path="/cashier" component={Cashier}></Route>
-                      <Route path="/oilCard" component={OilCard}></Route>
-                      <Route path="/query" component={Query}></Route>
-                      <Route path="/system" component={System}></Route>
-                      <Route component={Home}></Route>
-                    </Switch>
-                  </BrowserRouter>
-                </IntlProvider>
-          </Provider>
+            <IntlProvider locale=''>
+                <BrowserRouter>
+                <Header/>
+                <Switch>
+                    <Route path="/manage" component={Manage}></Route>
+                    <Route path="/cashier" component={Cashier}></Route>
+                    <Route path="/oilCard" component={OilCard}></Route>
+                    <Route path="/query" component={Query}></Route>
+                    <Route path="/system" component={System}></Route>
+                    <Route component={Home}></Route>
+                </Switch>
+                </BrowserRouter>
+            </IntlProvider>
         );
     }
 }
 
-export default  App
+
+const mapStateToProps = (state)=>{
+    return {
+      currentLocale:state.currentLocale,
+    }
+  };
+  const mapDispatchToProps = (dispatch)=>{
+    return {
+      dispatch
+    }
+  };
+  
+  export default connect(mapStateToProps, mapDispatchToProps)(App)

@@ -9,10 +9,12 @@ const initialState={
     current: 1,
     visible:false,
     currentLocale: 'zh-CN',
+    initDone:false
 };
 
 
 export default(state = initialState, action)=> {
+    console.log(action,'action')
     switch (action.type) {
         case constants.CHOOSE_MENU:
             return {
@@ -33,6 +35,11 @@ export default(state = initialState, action)=> {
             return {
                 ...state,
                 visible:action.visible,
+            };
+        case constants.CHOOSE_LANGUAGE:
+            return {
+                ...state,
+                currentLocale:action.currentLocale
             }
         default:
             return state;

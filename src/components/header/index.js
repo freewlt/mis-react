@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { Button, Select } from 'antd';
-import { chooseMenu, chooseLfMenu, chooseLfSubMenu } from '../../store/actionCreators';
+import { chooseMenu, chooseLfMenu, chooseLfSubMenu, chooseLanguage } from '../../store/actionCreators';
 import intl from 'react-intl-universal';
 
 import './index.css';
@@ -16,7 +16,6 @@ import cashier from './../../static/images/header/cashier.png';
 import iconMin from './../../static/images/header/min.png';
 import iconMax from './../../static/images/header/max.png';
 import iconClose from './../../static/images/header/close.png';
-
 const { Option } = Select;
 const navList = [
     {id:1,title:'经营状况',pic:iconEchart,path:'/manage'},
@@ -24,7 +23,6 @@ const navList = [
     {id:21,title:'油卡业务',pic:iconOilCard,path:'/oilCard'},
     {id:45,title:'查询报表',pic:iconTable,path:'/query'},
     {id:16,title:'系统配置',pic:iconSys,path:'/system'},
-
 ]
 
 class Header extends Component {
@@ -46,19 +44,23 @@ class Header extends Component {
     };
 
     changeLanguage(lang) {
-        if(lang==='china'){
-            this.setState({currentLocale: 'zh-CN'});
-        }else if(lang==='English'){
-            this.setState({currentLocale: 'zh-CN'});
-        }else {
-            this.setState({currentLocale: 'en_US'});
-        }
+        const {dispatch} = this.props;
+         dispatch(chooseLanguage(lang))
+        //this.setState({currentLocale: 'en_US'});
+        // if(lang==='zh-CN'){
+        //     dispatch(chooseLanguage('en_US'))
+        //     console.log(this.props.currentLocale)
+        // }
+        //  if(lang==='en_US'){
+        //     dispatch(chooseLanguage('zh-CN'))
+        //     this.setState({currentLocale: 'zh-CN'});
+        //     console.log(this.props.currentLocale)
+        // }
     };
 
     componentDidMount(){
         this.changeLanguage()
     }
-
 
     render(){
         
@@ -108,8 +110,8 @@ class Header extends Component {
                         </Button>
                         <Select className="selectLanguage" placeholder="中文"
                                 onChange={this.changeLanguage.bind(this)}>
-                            <Option value="china">中文</Option>
-                            <Option value="English">English</Option>
+                            <Option value="zh-CN">中文</Option>
+                            <Option value="en-US">English</Option>
                         </Select>
                     </div>
                 </div>
@@ -122,7 +124,8 @@ class Header extends Component {
 const mapStateToProps = (state)=>{
     return {
       list: state.number,
-      curId:state.current
+      curId:state.current,
+      currentLocale:state.currentLocale,
     }
   };
   const mapDispatchToProps = (dispatch)=>{
