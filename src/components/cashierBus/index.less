@@ -19,6 +19,8 @@
     height: 42%;
     background: #fff;
     border-radius: 10px;
+    overflow-y: auto;
+    padding-bottom: 20px;
     th{
       font-weight: bold;
       background: #e1e9f6;
@@ -26,7 +28,7 @@
     td:nth-child(2){
       .txt{
         display: block;
-        widows: 40px;
+        width: 40px;
         height:20px;
         border-radius: 40%;
         color: #fff;
@@ -47,17 +49,17 @@
     width:100%;
     height: 57%;
     background: #fff;
-    border-radius: 10px;
+    border-radius: 5px;
     .gunNum{
+      position: relative;
       width: 16.6%;
       height: 16.7%;
-      padding:10px 0 0 10px;
       border-radius: 0;
       color: #d1d1d1;
       border-top: 1px solid #ccc;
       border-right:1px solid #ccc;
       box-sizing: border-box;
-      font-size: 18px;
+      font-size: 14px;
       font-weight: bold;
       cursor: pointer;
       &:nth-child(6){
@@ -72,8 +74,55 @@
         border-right: none;
       }
       &:nth-child(36){
-        border-radius: 0 0 10px 0;
+        border-radius: 0 0 5px 0;
         border-right: none;
+      }
+      .num{
+        display: block;
+        width: 25px;
+        margin: 5px 0 0 5px;
+        text-align: center;
+        border-radius: 40%;
+      }
+      .oilNum, .price{
+        display: none
+      }
+    }
+    .detail, .detailReful{
+      background: url(../../static/images/cashierBus/agenFund.png) no-repeat right 5px;
+      .oilNum{
+        position: absolute;
+        bottom:16px;
+        display:block;
+        width: 92%;
+        font-size: 12px;
+        color: #666;
+        text-align: right;
+      }
+      .price{
+        position: absolute;
+        left:4%;
+        bottom:2px;
+        display:block;
+        width: 92%;
+        background: red;
+        color: #fff;
+        font-size: 12px;
+        text-align: center;
+      }
+      .num{
+        color: #fff;
+        background: red;
+      }
+    }
+    .detailReful{
+      background: url(../../static/images/cashierBus/refueling.png) no-repeat right 5px;
+      .price{
+        background:orange;
+      }
+      .num{
+        color: #fff;
+        background: orange;
       }
     }
   }
@@ -157,6 +206,8 @@
       height: 93%;
       background: #fff;
       border-radius: 10px;
+      overflow-y: auto;
+      padding-bottom: 20px;
       table{
         th{
           font-weight: bold;
@@ -201,6 +252,7 @@
               border: 1px solid #ccc;
               border-radius: 50%;
               cursor: pointer;
+              user-select:none;
             }
             .num{
               padding: 0 10px;
@@ -311,3 +363,6 @@
   text-align: center;
 }
 
+table{
+  table-layout: fixed;
+}

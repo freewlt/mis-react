@@ -46,13 +46,13 @@ class Right extends React.Component {
             },
             {
                 title: '数量',
-                dataIndex: 'gendeer',
+                dataIndex: 'num',
                 width:'20%',
                 render: (text, record) =>(
                     <div className="goodNum">
-                        <span className="btn minus" onClick={()=> record.num--}>-</span>
+                        <span className="btn minus" onClick={()=> this.decrease(record)}>-</span>
                         <span className="num">{record.num}</span>
-                        <span className="btn plus" onClick={()=> this.increase(record.num)}>+</span>
+                        <span className="btn plus" onClick={()=> this.increase(record)}>+</span>
                     </div>
                 ),
             },
@@ -79,32 +79,30 @@ class Right extends React.Component {
             {
                 key: 0,
                 name: '哇哈哈矿泉水',
+                unitPrice: 243,
                 amount: 120,
-                unitPrice: '12',
+                num:10,
                 note: 'transfer',
                 discount:'2件9折',
                 type:1,
-                num:10
               },
               {
                 key: 1,
                 name: '哇哈哈矿泉水-03-11',
                 unitPrice: 243,
                 amount: 21,
-                note: 'transfer',
+                num:12,
                 discount:'3件8折',
                 type:2,
-                num:12
               },
               {
                 key: 2,
                 name: '哇哈哈矿泉水11',
                 unitPrice: 98,
                 amount: 21,
-                note: 'transfer',
+                num:12,
                 discount:'2件9折',
                 type:3,
-                num:12
               },
         ]
     }
@@ -114,17 +112,12 @@ class Right extends React.Component {
         this.setState({ dataSource: dataSource.filter(item => item.key !== key) });
     };
     
-    increase= num =>{
-        this.setState({
-            num: num ++
-        });
+    increase= (record) =>{
+        this.setState({ dataSource: this.state.dataSource.map((it) => it.key === record.key ? {...record, num: ++record.num} : it )  })
     }
-     decrease= num =>{
-         if(this.state.num > 1){
-            this.setState({
-                num: num--
-            });
-         }
+     decrease= (record) =>{
+        this.setState({ dataSource: this.state.dataSource.map((it) => it.key === record.key ? {...record, num: --record.num} : it )  })
+        
     }
 
     render() {
