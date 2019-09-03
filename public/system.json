@@ -216,7 +216,7 @@
       "name": "图片设置",
       "parentId": "12029684246118400",
       "remark": "",
-      "url": "/admin/setting/editPointSetting.jhtml",
+      "url": "/system/picSet/picSet",
       "type": "1",
       "large": "",
       "medium": "images/menuLf/imageManage.png",

@@ -23,6 +23,9 @@ const locales = {
 class App extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            initDone: false,
+        }
     };
 
     componentDidMount () {
@@ -30,29 +33,42 @@ class App extends React.Component {
     }
 
     loadLocales() {
-        console.log(this.props.currentLocale)
+        console.log(this.state.currentLocale)
         intl.init({
             currentLocale:this.props.currentLocale,
             locales,
-        })
+        }).then(() => {
+                this.setState({initDone: true});
+        });
     }
+    
+    // componentDidUpdate(PrevProps, props) {
+    //     console.log(PrevProps,'prevProps')
+    //     console.log(props,'props')
+    //     console.log(this.state.currentLocale,'props.currentLocale')
+    //     if (PrevProps.currentLocale !== this.props.currentLocale) {
+    //         this.loadLocales();
+    //     }
+    //   }
 
     render() {
         
         return (
-            <IntlProvider locale=''>
-                <BrowserRouter>
-                <Header/>
-                <Switch>
-                    <Route path="/manage" component={Manage}></Route>
-                    <Route path="/cashier" component={Cashier}></Route>
-                    <Route path="/oilCard" component={OilCard}></Route>
-                    <Route path="/query" component={Query}></Route>
-                    <Route path="/system" component={System}></Route>
-                    <Route component={Home}></Route>
-                </Switch>
-                </BrowserRouter>
-            </IntlProvider>
+            <div className="container">
+                <IntlProvider locale='' >
+                    <BrowserRouter>
+                    <Header/>
+                    <Switch>
+                        <Route path="/manage" component={Manage}></Route>
+                        <Route path="/cashier" component={Cashier}></Route>
+                        <Route path="/oilCard" component={OilCard}></Route>
+                        <Route path="/query" component={Query}></Route>
+                        <Route path="/system" component={System}></Route>
+                        <Route component={Home}></Route>
+                    </Switch>
+                    </BrowserRouter>
+                </IntlProvider>
+            </div>
         );
     }
 }

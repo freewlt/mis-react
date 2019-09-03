@@ -24,7 +24,7 @@ body {
   text-align: center;
 }
 .header .menuBox .menuNav {
-  padding: 18px 20px;
+  padding: 21px 20px;
   margin: 0 20px;
   text-decoration: none;
 }
@@ -57,11 +57,6 @@ body {
   max-height: 30px;
   background: #187ffd;
 }
-.header .handleBox .handleDetail .handleDeCon {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 .header .handleBox .handleDetail .detail {
   display: inline-block;
   vertical-align: middle;
@@ -69,8 +64,14 @@ body {
   color: #fff;
 }
 .header .handleBox .handleDetail .detail .iconPic {
+  display: inline-block;
+  vertical-align: middle;
   padding: 0 5px;
   cursor: pointer;
+}
+.header .handleBox .handleDetail .detail span {
+  display: inline-block;
+  vertical-align: middle;
 }
 .header .handleBox .handleDetail .detail .close:hover {
   transform: scale(1.1);

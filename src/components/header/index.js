@@ -45,17 +45,17 @@ class Header extends Component {
 
     changeLanguage(lang) {
         const {dispatch} = this.props;
-         dispatch(chooseLanguage(lang))
-        //this.setState({currentLocale: 'en_US'});
-        // if(lang==='zh-CN'){
-        //     dispatch(chooseLanguage('en_US'))
-        //     console.log(this.props.currentLocale)
-        // }
-        //  if(lang==='en_US'){
-        //     dispatch(chooseLanguage('zh-CN'))
-        //     this.setState({currentLocale: 'zh-CN'});
-        //     console.log(this.props.currentLocale)
-        // }
+        //  dispatch(chooseLanguage(lang))
+        // this.setState({currentLocale: 'en_US'});
+        if(lang==='zh-CN'){
+            dispatch(chooseLanguage('en_US'))
+            console.log(this.props.currentLocale)
+        }
+         if(lang==='en_US'){
+            dispatch(chooseLanguage('zh-CN'))
+            this.setState({currentLocale: 'zh-CN'});
+            console.log(this.props.currentLocale)
+        }
     };
 
     componentDidMount(){

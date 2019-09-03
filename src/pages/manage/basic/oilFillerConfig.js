@@ -18,9 +18,9 @@ class OilFillerConfig extends Component{
 
   render(){
     const mainList = this.state.list.map((item)=>
-      <Form className="oilFillerForm"  key={item.id}>
+      <Form className="oilFillerForm"  key={item.id} >
       <Row>
-        <Col span={3}>
+        <Col span={4}>
           <Form.Item label="加油点">
             <Input className="gunInput" placeholder="1" />
           </Form.Item>
@@ -49,17 +49,17 @@ class OilFillerConfig extends Component{
             <Input placeholder="1" />
           </Form.Item>
         </Col>
-        <Col span={3}>
+        <Col span={2}>
           <Form.Item className="edit">
-            <Button  type="danger">
-              编辑
-              <span className="editIcon"></span>
+            <Button type="primary">
+              保存
+              <span className="determineIcon"></span>
             </Button>
           </Form.Item>
         </Col>
       </Row>
       <Row>
-        <Col span={3}></Col>
+        <Col span={4}></Col>
         <Col span={4}>
           <Form.Item label="油枪">
             <Input className="gunInput" placeholder="1"/>
@@ -92,6 +92,14 @@ class OilFillerConfig extends Component{
       <div className="mainBox oilFilerConfig">
         <div className="mainCon">
             {mainList}
+            <Row className="btnGroup">
+              <Form.Item wrapperCol={{  offset: 2 }}>
+                <Button type="primary" htmlType="submit">
+                  添加
+                  <span className="newIcon"></span>
+                </Button>
+              </Form.Item>
+            </Row>
         </div>
       </div>
     )

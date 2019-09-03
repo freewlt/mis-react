@@ -3,6 +3,8 @@ import { Tabs, Table, Form, Input, Button, Row, Col, Select, DatePicker } from '
 import reqwest from 'reqwest';
 import '../../index.css';
 
+import bankCardPic from '../../../static/images/bankCard.png';
+
 const { Option } = Select;
 const { TabPane } = Tabs;
 const columns = [
@@ -194,53 +196,60 @@ class TradeQuery extends Component {
                                   </Button>
                                 </Col>
                             </Row>
-                            <Row className="rowBetween">
-                              <Col span={4}>
-                                  <Form.Item label="卡片类别">
-                                      <span className="ant-form-text">个人用户</span>
-                                  </Form.Item>
-                              </Col>
-                              <Col span={4}>
-                                  <Form.Item label="卡片属性">
-                                      <span className="ant-form-text">个人用户</span>
-                                  </Form.Item>
-                              </Col>
-                            </Row>
-                            <Row className="rowBetween">
-                              <Col span={4}>
-                                  <Form.Item label="卡片等级">
-                                      <span className="ant-form-text">个人用户</span>
-                                  </Form.Item>
-                              </Col>
-                              <Col span={4}>
-                                  <Form.Item label="卡片余额">
-                                      <span className="ant-form-text">个人用户</span>
-                                  </Form.Item>
-                              </Col>
-                            </Row>
-                            <Row className="rowBetween">
-                              <Col span={4}>
-                                  <Form.Item label="客户姓名">
-                                      <span className="ant-form-text">个人用户</span>
-                                  </Form.Item>
-                              </Col>
-                              <Col span={4}>
-                                  <Form.Item label="身份证号">
-                                      <span className="ant-form-text">158482148714547851</span>
-                                  </Form.Item>
-                              </Col>
-                            </Row>
-                            <Row className="rowBetween">
-                              <Col span={4}>
-                                  <Form.Item label="手机号码">
-                                      <span className="ant-form-text">15811478588</span>
-                                  </Form.Item>
-                              </Col>
-                              <Col span={4}>
-                                  <Form.Item label="开卡网点">
-                                      <span className="ant-form-text">运营部测试油站</span>
-                                  </Form.Item>
-                              </Col>
+                            <Row>
+                                <Col span={6}>
+                                    <img className="bankCardPic" src={bankCardPic} alt=""/>
+                                </Col>
+                                <Col span={12}>
+                                    <Row className="rowBetween">
+                                    <Col span={12}>
+                                        <Form.Item label="卡片类别">
+                                            <span className="ant-form-text">个人用户</span>
+                                        </Form.Item>
+                                    </Col>
+                                    <Col span={12}>
+                                        <Form.Item label="卡片属性">
+                                            <span className="ant-form-text">个人用户</span>
+                                        </Form.Item>
+                                    </Col>
+                                    </Row>
+                                    <Row className="rowBetween">
+                                    <Col span={12}>
+                                        <Form.Item label="卡片等级">
+                                            <span className="ant-form-text">个人用户</span>
+                                        </Form.Item>
+                                    </Col>
+                                    <Col span={12}>
+                                        <Form.Item label="卡片余额">
+                                            <span className="ant-form-text">个人用户</span>
+                                        </Form.Item>
+                                    </Col>
+                                    </Row>
+                                    <Row className="rowBetween">
+                                    <Col span={12}>
+                                        <Form.Item label="客户姓名">
+                                            <span className="ant-form-text">个人用户</span>
+                                        </Form.Item>
+                                    </Col>
+                                    <Col span={12}>
+                                        <Form.Item label="身份证号">
+                                            <span className="ant-form-text">158482148714547851</span>
+                                        </Form.Item>
+                                    </Col>
+                                    </Row>
+                                    <Row className="rowBetween">
+                                    <Col span={12}>
+                                        <Form.Item label="手机号码">
+                                            <span className="ant-form-text">15811478588</span>
+                                        </Form.Item>
+                                    </Col>
+                                    <Col span={12}>
+                                        <Form.Item label="开卡网点">
+                                            <span className="ant-form-text">运营部测试油站</span>
+                                        </Form.Item>
+                                    </Col>
+                                    </Row>
+                                </Col>
                             </Row>
                             <Table
                                 columns={columns}

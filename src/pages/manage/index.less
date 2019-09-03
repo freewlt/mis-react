@@ -23,8 +23,9 @@ table{
     }
   }
   .btnGroup{
-    display: inherit;
-    justify-content: inherit;
+    .confirBtn{
+      margin-left: 6%
+    }
   }
 }
 
@@ -87,6 +88,32 @@ table{
     margin-right:10px;
   }
 }
+//配置信息
+.configInfo{
+  .btnGroup{
+    .confirBtn{
+      margin-left: 4%
+    }
+  }
+}
+//图片设置
+.picSet{
+  .mainCon{
+    margin-top: -20px;
+    .picBox{
+      .pic{
+        width:80px;
+        height:60px;
+      }
+    }
+    .iconBtnGroup{
+      cursor: pointer;
+      img{
+        padding:0 4px;
+      }
+    }
+  }
+}
 
 //订单查询
 .orderQuery{
@@ -132,7 +159,7 @@ table{
     white-space: nowrap;
     button{
       margin-left: 10px;
-      
+      padding: 0px 20px;
     }
     .resetBtn{
       border-color: #10c99d;
@@ -241,13 +268,17 @@ table{
   .rowBetween{
     justify-content: space-between;
   }
+  .bankCardPic{
+    width:90%;
+    height:205px;
+  }
 }
 
 .handleBtn{
   display: flex;
   justify-content: flex-start;
   button{   
-    padding: 5px 40px;
+    padding: 3px 30px;
     margin-right: 10px;
     box-sizing: content-box;
   }

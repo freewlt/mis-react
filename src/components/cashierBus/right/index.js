@@ -68,7 +68,7 @@ class Right extends React.Component {
                 this.state.dataSource.length >= 1 ? (
                     <Popconfirm title="Sure to delete?" onConfirm={() => this.handleDelete(record.key)}>
                         <div className="iconBtnGroup">
-                            <a href="javascript:;" title='编辑' className="iconBtn deleteBlackIcon"></a>
+                            <a href="javascript:;" title='删除' className="iconBtn deleteBlackIcon"></a>
                         </div>
                     </Popconfirm>
                   ) : null,

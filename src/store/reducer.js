@@ -14,7 +14,7 @@ const initialState={
 
 
 export default(state = initialState, action)=> {
-    console.log(action,'action')
+    //console.log(action,'action')
     switch (action.type) {
         case constants.CHOOSE_MENU:
             return {

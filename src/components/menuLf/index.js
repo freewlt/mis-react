@@ -17,6 +17,7 @@ class MenuLf extends Component {
 
   //二级面包屑
   handleClick = (item) => {
+    console.log(item.name,'item2')
     const { dispatch } = this.props;
     dispatch(chooseLfMenu(item.name))
     this.setState({
@@ -26,6 +27,7 @@ class MenuLf extends Component {
 
   //三级面包屑
   handle(item){
+    console.log(item.name,'item3')
     const { dispatch } = this.props;
     dispatch(chooseLfSubMenu(item.name));
   }

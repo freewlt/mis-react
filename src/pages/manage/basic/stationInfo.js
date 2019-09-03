@@ -119,12 +119,10 @@ class StationInfo extends Component {
               </Col>
             </Row>
             <Row className="btnGroup">
-              <Form.Item wrapperCol={{  offset: 2 }}>
-                <Button type="primary" htmlType="submit">
+                <Button className="confirBtn" type="primary" htmlType="submit">
                   确定
                   <span className="determineIcon"></span>
                 </Button>
-              </Form.Item>
             </Row>
           </Form>
       </div>

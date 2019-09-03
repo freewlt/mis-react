@@ -2,8 +2,9 @@
 .rightCon,
 .centerCon {
   display: inline-block;
-  vertical-align: top;
-  height: 88%;
+  vertical-align: middle;
+  height: 96%;
+  padding: 2% 0;
 }
 .leftCon .ant-table-pagination,
 .rightCon .ant-table-pagination,
@@ -33,7 +34,7 @@
 }
 .leftCon .listGood td:nth-child(2) .txt {
   display: block;
-  width: 40px;
+  width: 30px;
   height: 20px;
   border-radius: 40%;
   color: #fff;
@@ -158,6 +159,8 @@
   background: linear-gradient(angle, #f3f3f3, #ededed);
   border-color: #e9e9e9;
   box-shadow: 2px 2px 2px #777;
+  font-weight: bold;
+  font-size: 16px;
 }
 .centerCon .btn:nth-child(3) {
   color: #fff;
@@ -187,7 +190,7 @@
   justify-content: space-around;
   align-content: center;
   align-items: center;
-  height: 7%;
+  height: 12%;
   padding: 0;
   font-size: 0;
   background: #313541;
@@ -219,9 +222,9 @@
 }
 .rightCon .tableBox .listGood {
   width: 100%;
-  height: 93%;
+  height: 88%;
   background: #fff;
-  border-radius: 10px;
+  border-radius: 0 0 10px 10px;
   overflow-y: auto;
   padding-bottom: 20px;
 }
@@ -243,7 +246,7 @@
 .rightCon .tableBox .listGood table td .discountGreen {
   max-width: 70px;
   margin: 0 auto;
-  background: green;
+  background: #00c300;
   border-radius: 5%;
   text-align: center;
   font-size: 12px;
@@ -362,10 +365,10 @@
   vertical-align: middle;
 }
 .rightCon .payDetail .payMethod .btn span:first-child {
-  background-size: 60% 60%;
-}
-.rightCon .payDetail .payMethod .btn .eleCardIcon {
   margin-left: 0;
+}
+.rightCon .payDetail .payMethod .btn:last-child span:first-child {
+  display: none;
 }
 .ant-table-thead > tr > th,
 .ant-table-tbody > tr > td {
@@ -373,4 +376,14 @@
 }
 table {
   table-layout: fixed;
+}
+/* 设置滚动条的样式 */
+::-webkit-scrollbar {
+  width: 10px;
+}
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
 }

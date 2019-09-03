@@ -19,9 +19,8 @@ table tr:nth-child(even) {
 .stationInfo .subtitle a {
   font-size: 12px;
 }
-.stationInfo .btnGroup {
-  display: inherit;
-  justify-content: inherit;
+.stationInfo .btnGroup .confirBtn {
+  margin-left: 6%;
 }
 .mainBox {
   width: 100%;
@@ -73,6 +72,22 @@ table tr:nth-child(even) {
 .conditionGroup button {
   margin-right: 10px;
 }
+.configInfo .btnGroup .confirBtn {
+  margin-left: 4%;
+}
+.picSet .mainCon {
+  margin-top: -20px;
+}
+.picSet .mainCon .picBox .pic {
+  width: 80px;
+  height: 60px;
+}
+.picSet .mainCon .iconBtnGroup {
+  cursor: pointer;
+}
+.picSet .mainCon .iconBtnGroup img {
+  padding: 0 4px;
+}
 .orderQuery .timeBox .ant-calendar-picker {
   width: 174px;
   min-width: auto!important;
@@ -113,6 +128,7 @@ table tr:nth-child(even) {
 }
 .orderQuery .handleBtn button {
   margin-left: 10px;
+  padding: 0px 20px;
 }
 .orderQuery .handleBtn .resetBtn {
   border-color: #10c99d;
@@ -248,12 +264,16 @@ table tr:nth-child(even) {
 .tradeQuery .rowBetween {
   justify-content: space-between;
 }
+.tradeQuery .bankCardPic {
+  width: 90%;
+  height: 205px;
+}
 .handleBtn {
   display: flex;
   justify-content: flex-start;
 }
 .handleBtn button {
-  padding: 5px 40px;
+  padding: 3px 30px;
   margin-right: 10px;
   box-sizing: content-box;
 }

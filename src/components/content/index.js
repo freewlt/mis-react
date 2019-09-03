@@ -24,6 +24,8 @@ import PreferenPolicies from '../../pages/manage/preferenPolicies/preferenPolici
 //卸油管理
 import UnloadRecord from '../../pages/manage/unloadManage/unloadRecord';
 import UnloadHandle from '../../pages/manage/unloadManage/unloadHandle';
+//图片设置
+import PicSet from '../../pages/manage/picSet/picSet';
 //配置信息
 import ConfigInfo from '../../pages/manage/config/configInfo';
 
@@ -122,6 +124,7 @@ class Content extends Component {
           <Route path="/system/preferenPolicies/preferenPolicies" exact component={PreferenPolicies}></Route>
           <Route path="/system/unloadManage/unloadRecord" exact component={UnloadRecord}></Route>
           <Route path="/system/unloadManage/unloadHandle" exact component={UnloadHandle}></Route>
+          <Route path="/system/picSet/picSet" exact component={PicSet}></Route>
           <Route path="/system/config/configInfo" exact component={ConfigInfo}></Route>
           
 

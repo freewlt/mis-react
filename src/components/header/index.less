@@ -22,7 +22,7 @@ body{
     height: 100%;
     text-align: center;
     .menuNav{
-      padding: 18px 20px;
+      padding: 21px 20px;
       margin: 0 20px;
       text-decoration: none;
       .pic{
@@ -55,9 +55,11 @@ body{
       max-height:30px;
       background: #187ffd;
       .handleDeCon{
-        display: flex;
-        justify-content: space-between;
-        align-items:center;
+        // display: inline-block;
+        // vertical-align: middle;
+        // display: flex;
+        // justify-content: space-between;
+        // align-items:center;
       }
       .detail{
         display: inline-block;
@@ -65,8 +67,14 @@ body{
         padding:5px 10px;
         color: #fff;
         .iconPic{
+          display: inline-block;
+          vertical-align: middle;
           padding:0 5px;
           cursor: pointer;
+        }
+        span{
+          display: inline-block;
+          vertical-align: middle;
         }
         .close:hover{
           transform:scale(1.1);

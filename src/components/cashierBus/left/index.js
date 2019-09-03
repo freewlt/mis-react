@@ -8,7 +8,7 @@ for (let i = 0; i < 3; i++) {
   data.push({
     key: i.toString(),
     name: `Edrward ${i}`,
-    age: 32,
+    age: '32',
     price:2035,
     gendesr:10,
     oil:'92#',
@@ -106,12 +106,10 @@ class Left extends React.Component {
             {
                 title: '时间',
                 dataIndex: 'name',
-                editable: true,
             },
             {
                 title: '油枪',
                 dataIndex: 'age',
-                editable: true,
                 render:(text,record)=>(
                     <div className="txt">{record.age}</div>
                 )
@@ -119,7 +117,6 @@ class Left extends React.Component {
             {
                 title: '油品',
                 dataIndex: 'oil',
-                editable: true,
             },
             {
                 title: '升数',
