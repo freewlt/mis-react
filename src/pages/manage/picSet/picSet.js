@@ -90,9 +90,9 @@ handleClickBySortDown(index, e) {
        let temp = arr[e.key - 1];
       arr[e.key - 1] = arr[e.key];
       arr[e.key] = temp;
-      // this.setState({
-      //   dataSource: this.state.dataSource,
-      // });
+      this.setState({
+        dataSource: this.state.dataSource,
+      });
    }
 
 }

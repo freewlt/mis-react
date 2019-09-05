@@ -18,7 +18,7 @@ import iconMax from './../../static/images/header/max.png';
 import iconClose from './../../static/images/header/close.png';
 const { Option } = Select;
 const navList = [
-    {id:1,title:'经营状况',pic:iconEchart,path:'/manage'},
+    {id:1,title:'经营状况',pic:iconEchart,path:'/busCircumstance'},
     {id:51,title:'收银业务',pic:iconMoney,path:'/cashier'},
     {id:21,title:'油卡业务',pic:iconOilCard,path:'/oilCard'},
     {id:45,title:'查询报表',pic:iconTable,path:'/query'},

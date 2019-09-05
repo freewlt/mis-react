@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import {BrowserRouter,Route, Switch} from 'react-router-dom';
 
 import Home from '../src/pages/home';
-import Manage from '../src/pages/manage';
+import BusCircum from '../src/pages/busCircumstance';
 import Cashier from '../src/pages/Cashier';
 import OilCard from '../src/pages/oilCard';
 import Query from '../src/pages/query';
@@ -59,7 +59,7 @@ class App extends React.Component {
                     <BrowserRouter>
                     <Header/>
                     <Switch>
-                        <Route path="/manage" component={Manage}></Route>
+                        <Route path="/busCircumstance" component={BusCircum}></Route>
                         <Route path="/cashier" component={Cashier}></Route>
                         <Route path="/oilCard" component={OilCard}></Route>
                         <Route path="/query" component={Query}></Route>

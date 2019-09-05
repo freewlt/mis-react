@@ -1,0 +1,233 @@
+//选择条件
+.selectCirter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:98%;
+    height: 4rem;
+    padding:0 15px;
+    margin: 0 auto;
+    background: #313541;
+    color: #fff;
+    border-radius: 10px;
+    .selectLf{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .symbol{
+        display: block;
+        width:3px;
+        height:14px;
+        background: #1863fd;
+        margin-right: 5px;
+      }
+      .btn{
+        height:24px;
+        margin-left: 10px;
+        background: none;
+        border: none;
+        color: #fff;
+      }
+      .ant-btn:hover, .ant-btn:focus{
+        background: #1863fd;
+        border-radius: 20px;
+      }
+    }
+    .network{
+      display: flex;
+      justify-content: center;
+      .status{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 50px;
+        .pos{
+          color: #00c300;
+        }
+        .linkStatus{
+          display: block;
+          width:10px;
+          height:10px;
+          margin-right:5px;
+          border-radius: 50%;
+          background: #00c300;
+        }
+      }
+    }
+}
+//统计数据
+.statistic{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width:98%;
+  height:10.5rem;
+  margin:1rem auto;
+  .list{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    width:27.5%;
+    height:100%;
+    padding: 0 10px;
+    border-radius: 10px;
+    &:first-child{
+      background:linear-gradient(to right,#b56ce5,#7782de);
+    }
+    &:nth-child(2){
+      background:linear-gradient(to right,#05d7fb,#25d652);
+    }
+    &:nth-child(3){
+      background:linear-gradient(to right,#f69640,#ffc37d);
+    }
+    &:last-child{
+      width:16%;
+      background:linear-gradient(to right,#eb648f,#f0679f);
+      .dataList{
+        &:last-child{
+          display: none;
+        }
+      }
+    }
+    .dataList{
+      width:25%;
+      text-align: center;
+      color: #fff;
+      .data{
+        display: block;
+        padding-top: 10px;
+        font-size:18px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+.echartTable{
+  display: flex;
+  justify-content: space-between;
+  width:98%;
+  height: 26rem;
+  margin: 0 auto;
+  #main{
+    width:66.5%;
+    height: 100%;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    .charts {
+      height:100%;
+    }
+  }
+  .table{
+    width:32.8%;
+    padding: 11px 1%;
+    height: 100%;
+    overflow-y: auto;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    th, td{
+      padding: 8px 16px;
+      border: none;
+    }
+  }
+  .ant-pagination{
+    display: none;
+  }
+}
+
+
+.echarts{
+  display: flex;
+  justify-content: space-between;
+  width:98%;
+  height: 26rem;
+  margin: 1rem auto;
+  .pie{
+    width:32.8%;
+    height:100%;
+    background: #fff;
+    border:1px solid #ccc;
+    border-radius: 10px;
+  }
+  #pieFir, #pieSec, #pieThi{
+    width:100%;
+    height: 100%;
+  .charts {
+    height:100%;
+  }
+  }
+}
+
+.busBottom{
+  display: flex;
+  justify-content: space-between;
+  width:98%;
+  height: calc(100% - 70.5rem);
+  margin: 0 auto;
+  .list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height:100%;
+  }
+  .preNextbtn {
+    width:4%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .sliderBox-1MmUg{
+    width:90.8%;
+    margin:0 auto;
+    .sliders-2DYvM{
+      padding: 0;
+    }
+    .btn{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fff;
+      width: 4%;
+      height: 100%;
+      border-radius: 10px;
+    }
+    .arrows-1qk_3{
+      .left-3ackY {
+        left: 0px;
+        top:45%!important;
+        width: 4%;
+        height: 100%;
+        border-radius: 10px;
+        color: #00c300;
+      }
+      .right-2j20K{
+        right: 0px;
+        top:45%!important;
+        width: 4%;
+        height: 100%;
+        border-radius: 10px;
+        color: #00c300;
+      }
+    }
+    
+  }
+  .pie{
+    width:24.5%;
+    height:100%;
+    background: #fff;
+    border:1px solid #ccc;
+    border-radius: 10px;
+  }
+  #pie1, #pie2, #pie3, #pie4{
+    width:100%;
+    height: 100%;
+  .charts {
+    height:100%;
+  }
+  }
+}

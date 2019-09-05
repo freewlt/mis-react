@@ -267,6 +267,8 @@ table tr:nth-child(even) {
 .tradeQuery .bankCardPic {
   width: 90%;
   height: 205px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 8px #999696;
 }
 .handleBtn {
   display: flex;

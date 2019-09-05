@@ -1,0 +1,235 @@
+.selectCirter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 98%;
+  height: 4rem;
+  padding: 0 15px;
+  margin: 0 auto;
+  background: #313541;
+  color: #fff;
+  border-radius: 10px;
+}
+.selectCirter .selectLf {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.selectCirter .selectLf .symbol {
+  display: block;
+  width: 3px;
+  height: 14px;
+  background: #1863fd;
+  margin-right: 5px;
+}
+.selectCirter .selectLf .btn {
+  height: 24px;
+  margin-left: 10px;
+  background: none;
+  border: none;
+  color: #fff;
+}
+.selectCirter .selectLf .ant-btn:hover,
+.selectCirter .selectLf .ant-btn:focus {
+  background: #1863fd;
+  border-radius: 20px;
+}
+.selectCirter .network {
+  display: flex;
+  justify-content: center;
+}
+.selectCirter .network .status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 50px;
+}
+.selectCirter .network .status .pos {
+  color: #00c300;
+}
+.selectCirter .network .status .linkStatus {
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+  border-radius: 50%;
+  background: #00c300;
+}
+.statistic {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 98%;
+  height: 10.5rem;
+  margin: 1rem auto;
+}
+.statistic .list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 27.5%;
+  height: 100%;
+  padding: 0 10px;
+  border-radius: 10px;
+}
+.statistic .list:first-child {
+  background: linear-gradient(to right, #b56ce5, #7782de);
+}
+.statistic .list:nth-child(2) {
+  background: linear-gradient(to right, #05d7fb, #25d652);
+}
+.statistic .list:nth-child(3) {
+  background: linear-gradient(to right, #f69640, #ffc37d);
+}
+.statistic .list:last-child {
+  width: 16%;
+  background: linear-gradient(to right, #eb648f, #f0679f);
+}
+.statistic .list:last-child .dataList:last-child {
+  display: none;
+}
+.statistic .list .dataList {
+  width: 25%;
+  text-align: center;
+  color: #fff;
+}
+.statistic .list .dataList .data {
+  display: block;
+  padding-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.echartTable {
+  display: flex;
+  justify-content: space-between;
+  width: 98%;
+  height: 26rem;
+  margin: 0 auto;
+}
+.echartTable #main {
+  width: 66.5%;
+  height: 100%;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+.echartTable #main .charts {
+  height: 100%;
+}
+.echartTable .table {
+  width: 32.8%;
+  padding: 11px 1%;
+  height: 100%;
+  overflow-y: auto;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+.echartTable .table th,
+.echartTable .table td {
+  padding: 8px 16px;
+  border: none;
+}
+.echartTable .ant-pagination {
+  display: none;
+}
+.echarts {
+  display: flex;
+  justify-content: space-between;
+  width: 98%;
+  height: 26rem;
+  margin: 1rem auto;
+}
+.echarts .pie {
+  width: 32.8%;
+  height: 100%;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+.echarts #pieFir,
+.echarts #pieSec,
+.echarts #pieThi {
+  width: 100%;
+  height: 100%;
+}
+.echarts #pieFir .charts,
+.echarts #pieSec .charts,
+.echarts #pieThi .charts {
+  height: 100%;
+}
+.busBottom {
+  display: flex;
+  justify-content: space-between;
+  width: 98%;
+  height: calc(29.5%);
+  margin: 0 auto;
+}
+.busBottom .list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.busBottom .preNextbtn {
+  width: 4%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.busBottom .sliderBox-1MmUg {
+  width: 90.8%;
+  margin: 0 auto;
+}
+.busBottom .sliderBox-1MmUg .sliders-2DYvM {
+  padding: 0;
+}
+.busBottom .sliderBox-1MmUg .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  width: 4%;
+  height: 100%;
+  border-radius: 10px;
+}
+.busBottom .sliderBox-1MmUg .arrows-1qk_3 .left-3ackY {
+  left: 0px;
+  top: 45%!important;
+  width: 4%;
+  height: 100%;
+  border-radius: 10px;
+  color: #00c300;
+}
+.busBottom .sliderBox-1MmUg .arrows-1qk_3 .right-2j20K {
+  right: 0px;
+  top: 45%!important;
+  width: 4%;
+  height: 100%;
+  border-radius: 10px;
+  color: #00c300;
+}
+.busBottom .pie {
+  width: 24.5%;
+  height: 100%;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+.busBottom #pie1,
+.busBottom #pie2,
+.busBottom #pie3,
+.busBottom #pie4 {
+  width: 100%;
+  height: 100%;
+}
+.busBottom #pie1 .charts,
+.busBottom #pie2 .charts,
+.busBottom #pie3 .charts,
+.busBottom #pie4 .charts {
+  height: 100%;
+}

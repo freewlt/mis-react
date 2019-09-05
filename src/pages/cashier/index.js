@@ -1,6 +1,5 @@
 import React,{Component} from 'react';
 import { Form, Input, Button,Row, Col, } from 'antd';
-// import './index.css';
 
 
 class Casheng extends Component {

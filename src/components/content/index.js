@@ -52,8 +52,10 @@ import InventoryManage from '../../pages/oilCard/blankCardManage/inventoryManage
 import InOutLog from '../../pages/oilCard/blankCardManage/inOutLog';
 
 import Home from '../../pages/home.js';
-
-import Casheng from '../../pages/cashier/casheng';
+//经营状况
+import BusCircumstance from '../../pages/busCircumstance';
+//收银业务
+import Cashier from '../../pages/cashier/index';
 import './index.css';
 
 
@@ -66,16 +68,7 @@ class Content extends Component {
           {
             //经营状况
           }
-          <Route path="/manage/basic/stationInfo" exact component={StationInfo}></Route>
-          <Route path="/manage/basic/oilApplication" exact component={OilApplication}></Route>
-          <Route path="/manage/basic/oilInfo" exact component={OilInfo}></Route>
-          <Route path="/manage/basic/tankConfig" exact component={TankConfig}></Route>
-          <Route path="/manage/basic/oilFillerConfig" exact component={OilFillerConfig}></Route>
-          <Route path="/manage/config/configInfo" exact component={ConfigInfo}></Route>
-          <Route path="/manage/payMethod/payMethod" exact component={PayMethod}></Route>
-          <Route path="/manage/operatorConfig/operateConfig" exact component={OperateConfig}></Route>
-          <Route path="/manage/unloadManage/unloadRecord" exact component={UnloadRecord}></Route>
-          
+          <Route path="/busCircum" exact component={BusCircumstance}></Route>
           
           {
             //查询报表
@@ -85,8 +78,11 @@ class Content extends Component {
           <Route path="/query/reportManage/phyCardRecharge" exact component={PhyCardRecharge}></Route>
           <Route path="/query/reportManage/phyCardConsume" exact component={PhyCardConsume}></Route>
 
-          <Route path="/cashier/casheng" exact component={Casheng}></Route>
-
+          {
+            //收银业务
+          }
+          <Route path="/cashier/index" exact component={Cashier}></Route>
+          
           {
             //油卡业务
           }
