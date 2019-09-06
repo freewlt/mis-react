@@ -106,15 +106,12 @@
   height: 26rem;
   margin: 0 auto;
 }
-.echartTable #main {
-  width: 66.5%;
-  height: 100%;
+.echartTable .echarts-for-react {
+  width: 66.5%!important;
+  height: 100%!important;
   background: #fff;
   border: 1px solid #ccc;
   border-radius: 10px;
-}
-.echartTable #main .charts {
-  height: 100%;
 }
 .echartTable .table {
   width: 32.8%;
@@ -140,9 +137,9 @@
   height: 26rem;
   margin: 1rem auto;
 }
-.echarts .pie {
-  width: 32.8%;
-  height: 100%;
+.echarts .echarts-for-react {
+  width: 32.8%!important;
+  height: 100%!important;
   background: #fff;
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -212,23 +209,10 @@
 .busBottom .slick-next:before {
   content: url(../../static/images/arrowRt.png);
 }
-.busBottom .pie {
+.busBottom .echarts-for-react {
   width: 98%;
-  height: 100%;
+  height: 100%!important;
   background: #fff;
   border: 1px solid #ccc;
   border-radius: 10px;
-}
-.busBottom #pie1,
-.busBottom #pie2,
-.busBottom #pie3,
-.busBottom #pie4 {
-  width: 100%;
-  height: 100%;
-}
-.busBottom #pie1 .charts,
-.busBottom #pie2 .charts,
-.busBottom #pie3 .charts,
-.busBottom #pie4 .charts {
-  height: 100%;
 }
