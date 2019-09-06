@@ -47,7 +47,7 @@ class InoutLog extends Component {
                     <TabPane tab="实体卡充值报表" key="1">
                         <Form className="ant-advanced-search-form">
                             <Row>
-                                <Col span={5}>
+                                <Col>
                                     <Form.Item>
                                       <Select placeholder="全部">
                                         <Option value="chin14a">全部</Option>

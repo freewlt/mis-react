@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import { Table, Form } from 'antd';
+import { Table } from 'antd';
 import reqwest from 'reqwest';
 import '../index.css';
 
@@ -109,4 +109,4 @@ class OilApplication extends Component {
 
   
 }
-export default  Form.create({ name: 'coordinated' })(OilApplication);
+export default OilApplication;

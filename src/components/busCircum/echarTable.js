@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Table } from 'antd';
-
 import Test from './lineEchart.js';
+import axios from 'axios';
 
 const xdata=['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月']
 const ydata1=[200, 149, 170, 123, 256, 106, 135, 162, 102, 200, 194, 133]
@@ -59,7 +59,22 @@ const columns = [
   },
 ];
 
+
 class EchartTable extends Component {
+  constructor(props){
+    super(props);
+    this.state={
+    }
+  }
+
+  componentDidMount(){
+    const _this = this;
+      axios.get('./buscirumb.json').then((res) => {
+        _this.setState({ list: res })
+        console.log(this.state.list,'res')
+      });
+  }
+  
   render(){
     return (
       <div className="echartTable">

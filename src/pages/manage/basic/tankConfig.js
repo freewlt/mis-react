@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import { Table, Form, Row, Col, Button } from 'antd';
+import { Table, Row, Col, Button } from 'antd';
 import reqwest from 'reqwest';
 import '../index.css';
 
@@ -136,4 +136,4 @@ class TankConfig extends Component {
 
   
 }
-export default  Form.create({ name: 'coordinated' })(TankConfig);
+export default TankConfig;

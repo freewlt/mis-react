@@ -9,7 +9,7 @@ const initialState={
     current: 1,
     visible:false,
     currentLocale: 'zh-CN',
-    initDone:false
+    initDone:false,
 };
 
 

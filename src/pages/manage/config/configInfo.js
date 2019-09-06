@@ -5,7 +5,7 @@ import '../index.css';
 
 const { Option } = Select;
 
-class configInfo extends Component {
+class ConfigInfo extends Component {
   constructor(props){
     super(props);
     this.state = {
@@ -131,4 +131,4 @@ class configInfo extends Component {
 
   
 }
-export default  Form.create({ name: 'coordinated' })(configInfo);
+export default  Form.create({ name: 'coordinated' })(ConfigInfo);

@@ -131,4 +131,4 @@ class StationInfo extends Component {
 
   
 }
-export default  Form.create({ name: 'coordinated' })(StationInfo);
+export default  Form.create({ name: 'stationInfo' })(StationInfo);

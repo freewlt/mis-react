@@ -44,10 +44,9 @@ table tr:nth-child(even) {
   padding-top: 15px;
 }
 .oilFilerConfig .oilFillerForm {
-  width: 90%;
-  padding: 20px 60px 20px 20px;
-  margin-left: 2%;
-  margin-bottom: 40px;
+  width: 98%;
+  padding: 20px 40px 20px 0;
+  margin: 0 auto 40px;
   border: 1px solid #ccc;
 }
 .oilFilerConfig .oilFillerForm .ant-col {
@@ -136,6 +135,9 @@ table tr:nth-child(even) {
 }
 .preferenPolicies .ant-form-item-control-wrapper {
   width: 100%;
+}
+.preferenPolicies .ant-form-item-control-wrapper .ant-select {
+  width: 106px;
 }
 .preferenPolicies .ant-calendar-picker {
   min-width: inherit!important;
@@ -230,9 +232,11 @@ table tr:nth-child(even) {
 }
 .invoiceManage .balance {
   width: 100%;
-  border: 1px solid #000;
-  border-radius: 5px;
   margin-bottom: 20px;
+  color: #63624f;
+  background: #fffbcc;
+  border: 1px solid #dfddce;
+  border-radius: 5px;
 }
 .invoiceManage .balance .txt {
   padding: 10px;
@@ -275,7 +279,7 @@ table tr:nth-child(even) {
   justify-content: flex-start;
 }
 .handleBtn button {
-  padding: 3px 30px;
+  padding: 0 15px;
   margin-right: 10px;
   box-sizing: content-box;
 }
@@ -294,6 +298,12 @@ table tr:nth-child(even) {
 .handleBtn .areaBtn:hover {
   background: #f7ad70;
   border-color: #f7ad70;
+}
+.openCardForBtnGroup .ant-form-item-control-wrapper {
+  width: 100%;
+}
+.openCardForBtnGroup .ant-form-item-control-wrapper .readBtn {
+  margin-left: 8%;
 }
 .openCard .mainCon {
   margin-top: -20px;
@@ -317,26 +327,22 @@ table tr:nth-child(even) {
   width: 33%;
 }
 .recharge .title,
-.transferAccount .title {
-  width: 89%;
+.transferAccount .title,
+.modifyCard .title {
+  width: 95%;
   margin: 0 auto;
+}
+.inOutLog .ant-form-item-control-wrapper {
+  width: 100%;
+}
+.inOutLog .ant-form-item-control-wrapper .ant-select {
+  width: 164px;
 }
 .modifyCard .mainCon {
   margin-top: -20px;
 }
-.modifyCard .mainCon .title {
-  width: 89%;
-  margin: 0 auto;
-}
 .oilUnitSet .btnGroup .newBtn {
   margin-left: 10px;
-}
-.cardOperate .rowBetween {
-  width: 70%;
-  margin-left: 13%;
-}
-.cardOperate .handleBtn {
-  justify-content: space-between;
 }
 .plungAccount .title {
   padding: 16px 0;

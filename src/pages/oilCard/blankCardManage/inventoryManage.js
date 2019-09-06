@@ -95,7 +95,7 @@ class InventoryManage extends Component {
                     <TabPane tab="实体卡充值报表" key="1">
                         <Form className="ant-advanced-search-form">
                             <Row>
-                                <Col span={5}>
+                                <Col>
                                     <Form.Item label="开始日期">
                                         <DatePicker
                                         disabledDate={this.disabledStartDate}
@@ -107,7 +107,7 @@ class InventoryManage extends Component {
                                         onOpenChange={this.handleStartOpenChange}/>
                                     </Form.Item>
                                 </Col>
-                                <Col span={5}>
+                                <Col>
                                 <Form.Item label="结束日期">
                                     <DatePicker
                                         disabledDate={this.disabledEndDate}

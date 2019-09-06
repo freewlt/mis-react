@@ -160,6 +160,7 @@
 }
 
 .busBottom{
+  position: relative;
   display: flex;
   justify-content: space-between;
   width:98%;
@@ -181,43 +182,36 @@
     border-radius: 10px;
     cursor: pointer;
   }
-  .sliderBox-1MmUg{
-    width:90.8%;
-    margin:0 auto;
-    .sliders-2DYvM{
-      padding: 0;
+  .slick-slider{
+    width:100%;
+    padding:0 5%;
+    div{
+      height:100%;
     }
-    .btn{
-      display: flex;
-      justify-content: center;
-      align-items: center;
+  }
+  .slick-prev, .slick-next{
+    width: 4%;
+    height: 100%;
+    background: #fff;
+    border-radius: 10px;
+    &:hover{
       background: #fff;
-      width: 4%;
-      height: 100%;
-      border-radius: 10px;
     }
-    .arrows-1qk_3{
-      .left-3ackY {
-        left: 0px;
-        top:45%!important;
-        width: 4%;
-        height: 100%;
-        border-radius: 10px;
-        color: #00c300;
-      }
-      .right-2j20K{
-        right: 0px;
-        top:45%!important;
-        width: 4%;
-        height: 100%;
-        border-radius: 10px;
-        color: #00c300;
-      }
+  }
+  .slick-prev{
+    left:0;
+    &:before{
+      content:url(../../static/images/arrowLf.png)
     }
-    
+  }
+  .slick-next{
+    right:0;
+    &:before{
+      content:url(../../static/images/arrowRt.png)
+    }
   }
   .pie{
-    width:24.5%;
+    width:98%;
     height:100%;
     background: #fff;
     border:1px solid #ccc;

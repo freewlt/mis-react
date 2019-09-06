@@ -66,16 +66,16 @@ class OpenCard extends Component {
 
     render() {
         const { getFieldDecorator } = this.props.form;
-        const formItemLayout = {
-          labelCol: { span: 6 },
-          wrapperCol: { span: 12 },
-        };
+        // const formItemLayout = {
+        // //    labelCol: { span: 4 },
+        // //    wrapperCol: { span: 12 },
+        // };
         return (
         <div className="mainBox openCard">
             <div className="mainCon">
                 <Tabs>
                     <TabPane tab="个人用户" key="1">
-                        <Form {...formItemLayout} onSubmit={this.handleSubmit}>
+                        <Form labelCol={{ span: 4 }} wrapperCol={{ span: 12 }} onSubmit={this.handleSubmit}>
                             <Row>
                                 <Col span={24}>
                                     <Form.Item label="卡号">
@@ -186,7 +186,7 @@ class OpenCard extends Component {
                             </Row>
                             <Row>
                                 <Col span={24}>
-                                    <Form.Item className="handleBtn" wrapperCol={{ offset: 4 }}>
+                                    <Form.Item className="handleBtn" wrapperCol={{ offset: 2 }}>
                                         <Button className="readBtn" type="primary">
                                             读卡
                                         </Button>
@@ -204,7 +204,7 @@ class OpenCard extends Component {
                         </Form>
                     </TabPane>
                     <TabPane tab="员工用户" key="2">
-                        <Form {...formItemLayout} onSubmit={this.handleSubmit}>
+                        <Form labelCol={{ span: 4 }} wrapperCol={{ span: 12 }} onSubmit={this.handleSubmit}>
                             <Row>
                                 <Col span={24}>
                                     <Form.Item label="卡号">
@@ -315,7 +315,7 @@ class OpenCard extends Component {
                             </Row>
                             <Row>
                                 <Col span={24}>
-                                    <Form.Item className="handleBtn" wrapperCol={{ offset: 4 }}>
+                                    <Form.Item className="handleBtn" wrapperCol={{ offset: 2 }}>
                                         <Button className="readBtn" type="primary">
                                             读卡
                                         </Button>
@@ -331,7 +331,7 @@ class OpenCard extends Component {
                         </Form>
                     </TabPane>
                     <TabPane tab="单位用户-主卡" key="3">
-                        <Form {...formItemLayout} onSubmit={this.handleSubmit}>
+                        <Form labelCol={{ span: 4 }} wrapperCol={{ span: 12 }} onSubmit={this.handleSubmit}>
                             <Row>
                                 <Col span={24}>
                                     <Form.Item label="卡号">
@@ -442,7 +442,7 @@ class OpenCard extends Component {
                             </Row>
                             <Row>
                                 <Col span={24}>
-                                    <Form.Item className="handleBtn" wrapperCol={{ offset: 4 }}>
+                                    <Form.Item className="handleBtn" wrapperCol={{ offset: 2 }}>
                                         <Button className="readBtn" type="primary">
                                             读卡
                                         </Button>
@@ -458,7 +458,7 @@ class OpenCard extends Component {
                         </Form>
                     </TabPane>
                     <TabPane tab="单位用户-附属卡" key="4">
-                        <Form {...formItemLayout} onSubmit={this.handleSubmit}>
+                        <Form labelCol={{ span: 4 }} wrapperCol={{ span: 12 }} onSubmit={this.handleSubmit}>
                             <Row>
                                 <Col span={24}>
                                     <Form.Item label="卡号">
@@ -636,8 +636,8 @@ class OpenCard extends Component {
                                 </Col>
                             </Row>
                             <Row>
-                                <Col span={24}>
-                                    <Form.Item className="handleBtn" wrapperCol={{ offset: 4 }}>
+                                <Col span={24} className="openCardForBtnGroup">
+                                    <Form.Item className="handleBtn">
                                         <Button className="readBtn" type="primary">
                                             读卡
                                         </Button>

@@ -12,12 +12,12 @@ import 'echarts/lib/component/markPoint';
 import 'echarts/lib/component/markLine';
 import './index.css';
 
-window.addEventListener("resize",function(){
-  echarts.init(document.getElementById('pie1')).resize();
-  echarts.init(document.getElementById('pie2')).resize();
-  echarts.init(document.getElementById('pie3')).resize();
-  echarts.init(document.getElementById('pie4')).resize();
-});
+// window.addEventListener("resize",function(){
+//   echarts.init(document.getElementById('pie1')).resize();
+//   echarts.init(document.getElementById('pie2')).resize();
+//   echarts.init(document.getElementById('pie3')).resize();
+//   echarts.init(document.getElementById('pie4')).resize();
+// });
 
 class One extends Component {
   constructor(props) {

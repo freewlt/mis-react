@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
-import Slider from 'react-slider-light';
-import 'react-slider-light/lib/index.css';
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import Test from './one.js';
 import Test2 from './one.js';
 import Test3 from './one.js';
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const list ={
   id:'pie1',
@@ -65,18 +69,43 @@ function List (){
 
 class BusBottom extends Component {
   render(){
+
+    const settings = {
+      focusOnSelect: true,
+      infinite: true,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      speed: 500
+    };
+
     return (
       <div className="busBottom">
-        <div className="preNextbtn prevbtn">◀</div>
-        <Slider className="slider" autoPaly={false}  isArrows={true} > 
-          {
-            //<Slider className="slider" autoPaly={false} isArrows={true} arrowRender={(type) => <div className="btn">{type}</div>} > 
-          }
-            <List/>
-            <List/>
-            <List/>
+        <Slider className="slider"  {...settings} > 
+          <div>
+            <Test list ={list}/>
+          </div>
+          <div>
+            <Test2 list ={payMethodList}/>
+          </div>
+          <div>
+            <Test3 list ={menmberList}/>
+          </div>
+          <div>
+            <Test3 list ={tankList}/>
+          </div>
+          <div>
+            <h3>5</h3>
+          </div>
+          <div>
+            <h3>6</h3>
+          </div>
+          <div>
+            <h3>6</h3>
+          </div>
+          <div>
+            <h3>6</h3>
+          </div>
         </Slider>
-        <div className="preNextbtn nextbtn">▶</div>
       </div>
     )
   }

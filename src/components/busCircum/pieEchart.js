@@ -12,11 +12,11 @@ import 'echarts/lib/component/markPoint';
 import 'echarts/lib/component/markLine';
 import './index.css';
 
-window.addEventListener("resize",function(){
-    echarts.init(document.getElementById('pieFir')).resize();
-    echarts.init(document.getElementById('pieSec')).resize();
-    echarts.init(document.getElementById('pieThi')).resize();
-  });
+// window.addEventListener("resize",function(){
+//     echarts.init(document.getElementById('pieFir')).resize();
+//     echarts.init(document.getElementById('pieSec')).resize();
+//     echarts.init(document.getElementById('pieThi')).resize();
+//   });
 
 class PieEchart extends Component {
   constructor(props) {

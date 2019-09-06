@@ -155,7 +155,7 @@ class PreferenPolicies extends Component {
                     <TabPane tab="实体卡活动查询" key="3">
                       <Form className="ant-advanced-search-form" labelCol={{ span: 10 }}>
                         <Row>
-                          <Col span={5}>
+                          <Col>
                             <Form.Item label="活动类型">
                               <Select className="selectBox">
                                 <Option value="male">全部</Option>
@@ -163,7 +163,7 @@ class PreferenPolicies extends Component {
                               </Select>
                             </Form.Item>
                             </Col>
-                            <Col span={5}>
+                            <Col>
                               <Form.Item label="活动起止日期">
                                   <DatePicker
                                   disabledDate={this.disabledStartDate}
@@ -175,7 +175,7 @@ class PreferenPolicies extends Component {
                                   onOpenChange={this.handleStartOpenChange}/>
                               </Form.Item>
                             </Col>
-                            <Col span={5}>
+                            <Col>
                               <Form.Item label="活动终止日期">
                                 <DatePicker
                                 disabledDate={this.disabledEndDate}

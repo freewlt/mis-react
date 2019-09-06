@@ -10,9 +10,10 @@ import 'echarts/lib/component/markPoint';
 import 'echarts/lib/component/markLine';
 import './index.css'
 
-window.addEventListener("resize",function(){
-    echarts.init(document.getElementById('main')).resize();
-  });
+// window.addEventListener("resize",function(){
+//     // echarts.init(document.getElementById('main')).resize();
+//     this.myChart.resize();
+//   });
 
 class LineEchart extends Component {
     constructor(props) {
@@ -21,6 +22,7 @@ class LineEchart extends Component {
         this.chartInt =(item)=>{
             // 初始化
             var myChart = echarts.init(document.getElementById('main'));
+            this.myChart = myChart;
             // 绘制图表
             myChart.setOption({
             title: {
@@ -84,9 +86,8 @@ class LineEchart extends Component {
 
     componentDidMount() {
         this.chartInt()
-        
-    
     }
+
     render() {
         return (
             <div id="main"></div>

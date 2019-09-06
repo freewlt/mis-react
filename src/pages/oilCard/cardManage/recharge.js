@@ -66,7 +66,7 @@ class Recharge extends Component {
 
     render() {
         const formItemLayout = {
-          labelCol: { span: 6 },
+          labelCol: { span: 4 },
           wrapperCol: { span: 12 },
         };
         return (
@@ -151,7 +151,7 @@ class Recharge extends Component {
                             </Row>
                             <Row>
                                 <Col span={24}>
-                                    <Form.Item className="handleBtn" wrapperCol={{ offset: 4 }}>
+                                    <Form.Item className="handleBtn" wrapperCol={{ offset: 1 }}>
                                         <Button className="readBtn" type="primary">
                                             读卡
                                         </Button>
