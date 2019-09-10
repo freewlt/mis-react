@@ -132,15 +132,3 @@ class Content extends Component {
 }
 
 export default Content
-
-// const mapStateToProps =(state) => {
-//   return {
-
-//   }
-// }
-// const mapDispathToProps = (dispatch) =>{
-//   return {
-
-//   }
-// }
-// export default connect(mapStateToProps,mapDispathToProps)(content);

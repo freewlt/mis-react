@@ -14,75 +14,149 @@ class EchartTable extends Component {
     }
   }
 
+
+  pieInit = item =>{
+    const _this =this;
+    if(this.props.cycleCurrent === 71){
+      axios.get('./linetable.json').then((res) => {
+        const option = {
+          title: {
+            text: '油品销量趋势统计',
+            x: 'center',
+            y: 'bottom',
+            textStyle: {
+                fontWeight: 'normal',
+        　　　　 fontSize: 16
+            }
+          },
+          tooltip: {
+              trigger: 'axis'
+          },
+          legend: {
+              y: 6,
+              data: ['92#汽油','-10柴油','95#柴油']
+          },
+          color: ['#ffa052','#f15fa0','#81ddec'],
+          grid: {
+              top: 30,
+              left: '2%',
+              right: '2%',
+              bottom: '18%',
+              containLabel: true
+          },
+          xAxis: [
+              {
+                type: 'category',
+                boundaryGap: false,
+                data: res.data.data.xdata
+              }
+          ],
+          yAxis: [
+              {
+                type: 'value'
+              }
+          ],
+          series: [
+              {
+                name: '92#汽油',
+                type: 'line',
+                data: res.data.data.ydata1
+              },
+              {
+                name: '-10柴油',
+                type: 'line',
+                data: res.data.data.ydata2,
+              },
+              {
+                name: '95#柴油',
+                type: 'line',
+                data: res.data.data.ydata3,
+              },
+          ]
+        }
+        _this.setState({
+          'option': option,
+          'dataSource': res.data.data.dataSource,
+          'columns':res.data.data.columns
+        })
+      }).catch(err => {
+        console.log(err)
+      });
+    }else if(this.props.cycleCurrent === 2){
+      axios.get('./lineWeek.json').then((res) => {
+        const option = {
+          title: {
+            text: '油品销量趋势统计',
+            x: 'center',
+            y: 'bottom',
+            textStyle: {
+                fontWeight: 'normal',
+        　　　　 fontSize: 16
+            }
+          },
+          tooltip: {
+              trigger: 'axis'
+          },
+          legend: {
+              y: 6,
+              data: ['92#汽油','-10柴油','95#柴油']
+          },
+          color: ['#ffa052','#f15fa0','#81ddec'],
+          grid: {
+              top: 30,
+              left: '2%',
+              right: '2%',
+              bottom: '18%',
+              containLabel: true
+          },
+          xAxis: [
+              {
+                type: 'category',
+                boundaryGap: false,
+                data: res.data.data.xdata
+              }
+          ],
+          yAxis: [
+              {
+                type: 'value'
+              }
+          ],
+          series: [
+              {
+                name: '92#汽油',
+                type: 'line',
+                data: res.data.data.ydata1
+              },
+              {
+                name: '-10柴油',
+                type: 'line',
+                data: res.data.data.ydata2,
+              },
+              {
+                name: '95#柴油',
+                type: 'line',
+                data: res.data.data.ydata3,
+              },
+          ]
+        }
+        _this.setState({
+          'option': option,
+          'dataSource': res.data.data.dataSource,
+          'columns':res.data.data.columns
+        })
+      }).catch(err => {
+        console.log(err)
+      });
+    }
+    
+  }
+
   componentDidMount(){
-    const _this = this;
-    axios.get('./linetable.json').then((res) => {
-      const option = {
-        title: {
-          text: '油品销量趋势统计',
-          x: 'center',
-          y: 'bottom',
-          textStyle: {
-              fontWeight: 'normal',
-      　　　　 fontSize: 16
-          }
-        },
-        tooltip: {
-            trigger: 'axis'
-        },
-        legend: {
-            y: 6,
-            data: ['92#汽油','-10柴油','95#柴油']
-        },
-        color: ['#ffa052','#f15fa0','#81ddec'],
-        grid: {
-            top: 30,
-            left: '2%',
-            right: '2%',
-            bottom: '18%',
-            containLabel: true
-        },
-        xAxis: [
-            {
-              type: 'category',
-              boundaryGap: false,
-              data: res.data.data.xdata
-            }
-        ],
-        yAxis: [
-            {
-              type: 'value'
-            }
-        ],
-        series: [
-            {
-              name: '92#汽油',
-              type: 'line',
-              data: res.data.data.ydata1
-            },
-            {
-              name: '-10柴油',
-              type: 'line',
-              data: res.data.data.ydata2,
-            },
-            {
-              name: '95#柴油',
-              type: 'line',
-              data: res.data.data.ydata3,
-            },
-        ]
-      }
-      _this.setState({
-        'option': option,
-        'dataSource': res.data.data.dataSource,
-        'columns':res.data.data.columns
-      })
-    }).catch(err => {
-      console.log(err)
-    });
+    this.pieInit()
   }
   
   render(){
+    this.pieInit()
     return (
       <div className="echartTable">
         <ReactEcharts notMerge={true} lazyUpdate={true} option={this.state.option} />
@@ -92,4 +166,16 @@ class EchartTable extends Component {
   }
 }
 
-export default connect()(EchartTable);
+
+const mapStateToProps = (state)=>{
+  return {
+    cycleCurrent:state.cycleCurrent
+  }
+};
+const mapDispatchToProps = (dispatch)=>{
+  return {
+    dispatch
+  }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(EchartTable)

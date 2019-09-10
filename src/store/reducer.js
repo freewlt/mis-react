@@ -10,6 +10,7 @@ const initialState={
     visible:false,
     currentLocale: 'zh-CN',
     initDone:false,
+    cycleCurrent:71
 };
 
 
@@ -40,6 +41,11 @@ export default(state = initialState, action)=> {
             return {
                 ...state,
                 currentLocale:action.currentLocale
+            };
+        case constants.CHOOSE_CYCLE:
+            return {
+                ...state,
+                cycleCurrent:action.cycleCurrent
             }
         default:
             return state;

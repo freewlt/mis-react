@@ -1,20 +1,49 @@
 import React, { Component } from 'react';
-import {  Button } from 'antd';
-import './index.css'
+import { connect } from 'react-redux';
+import {  Button, DatePicker } from 'antd';
+import moment from 'moment';
+import { chooseCycle } from '../../store/actionCreators';
 
-const dateList=['近20天','近7天','昨天','今天','自定义']
+import './index.css'
+const dateFormat = 'YYYY/MM/DD';
+const { RangePicker } = DatePicker;
+
+const dateList=[
+  {id:1,title:'近20天',status:false},
+  {id:2,title:'近7天',status:false},
+  {id:3,title:'昨天',status:false},
+  {id:71,title:'今天',status:true},
+  {id:5,title:'自定义',status:false}
+]
 
 class BusTop extends Component {
   constructor(props){
     super(props);
-    this.state={}
+    this.state = {
+      isShow:false
+    }
   }
 
+  handleClick = (e) => {
+    const {dispatch} = this.props;
+    dispatch(chooseCycle(e.id))
+    if(e.id===5){
+     this.setState({
+       isShow:true
+     })
+    }else{
+     this.setState({
+      isShow:false
+    })
+    }
+  };
+
+  
   render(){
     
-  const dateSelect = dateList.map(item=>
-    <Button className="btn" key={item}>
-        {item}
+  const dateSelect = dateList.map(item=> 
+    <Button className= { item.id === this.props.cycleCurrent ? 'btn active' : 'btn' } key={item.id} onClick={this.handleClick.bind(this,item)}>
+        {item.title}
     </Button>
   )
 
@@ -24,6 +53,9 @@ class BusTop extends Component {
             <em className="symbol"></em>
             <span>鑫文龙油站</span>
             {dateSelect}
+            {this.state.isShow === true ? <RangePicker className="rangeDate"
+              defaultValue={[moment('2015/01/01', dateFormat), moment('2015/01/01', dateFormat)]}
+              format={dateFormat}/> :''}
           </div>
           <div className="network">
             <div className="status">POS机：<span className="pos">3台</span></div>
@@ -35,4 +67,16 @@ class BusTop extends Component {
   }
 }
 
-export default BusTop;
+
+  const mapStateToProps = (state)=>{
+    return {
+      cycleCurrent:state.cycleCurrent
+    }
+  };
+  const mapDispatchToProps = (dispatch)=>{
+    return {
+      dispatch
+    }
+  };
+
+  export default connect(mapStateToProps, mapDispatchToProps)(BusTop)

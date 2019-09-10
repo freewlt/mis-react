@@ -34,6 +34,34 @@
   background: #1863fd;
   border-radius: 20px;
 }
+.selectCirter .selectLf .active {
+  background: #1863fd;
+  border-radius: 20px;
+  color: #fff;
+}
+.selectCirter .rangeDate {
+  padding: 20px;
+}
+.selectCirter .rangeDate .ant-input {
+  background: none;
+  border: 1px solid #fff;
+  color: #fff;
+}
+.selectCirter .rangeDate .ant-calendar-picker-icon,
+.selectCirter .rangeDate .ant-calendar-range-picker-separator {
+  color: #fff;
+}
+.selectCirter .rangeDate .ant-calendar-picker-input.ant-input {
+  height: 20px;
+  line-height: 0.5;
+}
+.selectCirter .rangeDate .ant-calendar-range-picker-input {
+  width: 90px;
+  text-align: left;
+}
+.selectCirter .rangeDate .ant-calendar-range-picker-input:first-child {
+  width: 73px;
+}
 .selectCirter .network {
   display: flex;
   justify-content: center;
@@ -90,7 +118,7 @@
 }
 .statistic .list .dataList {
   width: 25%;
-  text-align: center;
+  text-align: left;
   color: #fff;
 }
 .statistic .list .dataList .data {
@@ -163,22 +191,6 @@
   height: calc(29.5%);
   margin: 0 auto;
 }
-.busBottom .list {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-}
-.busBottom .preNextbtn {
-  width: 4%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #fff;
-  border-radius: 10px;
-  cursor: pointer;
-}
 .busBottom .slick-slider {
   width: 100%;
   padding: 0 5%;
@@ -209,10 +221,24 @@
 .busBottom .slick-next:before {
   content: url(../../static/images/arrowRt.png);
 }
-.busBottom .echarts-for-react {
-  width: 98%;
-  height: 100%!important;
+.busBottom .chartDiv {
+  width: 97% !important;
   background: #fff;
   border: 1px solid #ccc;
   border-radius: 10px;
+  display: flex!important;
+  justify-content: center;
+}
+.busBottom .chartDiv .echarts-for-react {
+  width: 50%;
+  height: 100%!important;
+}
+.busBottom .chartDiv .detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+.busBottom .chartDiv .detail span {
+  display: block;
 }

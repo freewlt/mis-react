@@ -21,7 +21,6 @@ const columns = [
         title: '油站供应商',
         dataIndex: 'oilAmt',
     },
-    
     {
         title: '车牌号',
         dataIndex: 'feiYouAmt',
@@ -61,6 +60,7 @@ const columns = [
     {
         title: '操作',
         dataIndex: 'operation',
+        width:'200px',
         render: (text, record) =>(
             <div className="iconBtnGroup">
                 <a href="javascript:;" title='查看详情' className="iconBtn lookIcon"></a>

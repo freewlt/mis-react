@@ -21,6 +21,10 @@ export const chooseLanguage = (currentLocale)=>({
   type:constants.CHOOSE_LANGUAGE,
   currentLocale
 })
+export const chooseCycle = (cycleCurrent)=>({
+  type:constants.CHOOSE_CYCLE,
+  cycleCurrent
+})
 
 // export const getList = () => {
 //   return (dispatch) => {
